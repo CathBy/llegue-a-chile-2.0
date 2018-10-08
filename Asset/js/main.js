@@ -470,3 +470,10 @@
         
         
 })(jQuery);
+
+function vermodal(id,tipo){
+    console.log("tipo="+tipo+"id"+id)
+    $("#texto-model").html(tipo)
+    $("#exampleModalLong").modal()
+    
+}
