@@ -1482,7 +1482,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .header-nav__list a,
 .header-nav__list a:visited {
-    color: #FFFFFF;
+    color: rgb(197, 21, 21);
 }
 
 .header-nav__social {
