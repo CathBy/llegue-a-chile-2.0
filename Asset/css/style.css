@@ -178,7 +178,7 @@ figure>figcaption {
 .section-title .title {
   position: relative;
   display: inline-block;
-  background-color: #39b54a;
+  background-color: #b57539;
   font-size: 16px;
   text-transform: uppercase;
   margin-top: 0px;
@@ -191,7 +191,7 @@ figure>figcaption {
   content: "";
   display: inline-block;
   height: 2px;
-  background-color: #39b54a;
+  background-color: #ab39b5;
   position: absolute;
   left: 0;
   right: 0;
@@ -1207,7 +1207,7 @@ textarea.input {
 .social-widget ul li a {
   display: block;
   text-align: center;
-  padding: 30px 15px;
+  padding: 30px 14px;
   color: #fff;
   -webkit-transition: 0.2s opacity;
   transition: 0.2s opacity;
@@ -1292,7 +1292,7 @@ textarea.input {
 .category-widget ul li a span {
   float: right;
   font-size: 14px;
-  color: #97989b;
+  color: #ffffff;
   margin-left: 15px;
 }
 

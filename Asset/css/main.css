@@ -14,13 +14,13 @@ html, body {
 }
 
 body {
-    background: #111111;
+    background: #573131bb;
     font-family: "lora-regular", serif;
     font-size: 1.7rem;
     font-style: normal;
     font-weight: normal;
     line-height: 1.765;
-    color: #757575;
+    color: #8d27272a;
     margin: 0;
     padding: 0;
 }
@@ -2140,13 +2140,13 @@ html.no-csstransitions .home-content__main {
 .s-about {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #39b54a;
-    color: #010507;
+    background-color: #1604059d;
+    color: #8d560f60;
     position: relative;
 }
 
 .s-about .section-header.has-bottom-sep::before {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.733);
 }
 
 .about-desc {
@@ -2170,7 +2170,7 @@ html.no-csstransitions .home-content__main {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgb(255, 255, 255);
 }
 
 .stats__col:last-child {
@@ -2191,7 +2191,7 @@ html.no-csstransitions .home-content__main {
 .stats h5 {
     font-family: "montserrat-semibold", sans-serif;
     margin-top: 1.8rem;
-    color: #000000;
+    color: #ffffff;
     font-size: 1.8rem;
     line-height: 1.333;
     position: relative;
@@ -2672,7 +2672,7 @@ html.no-csstransitions .home-content__main {
 .s-clients {
     padding-top: 16.2rem;
     padding-bottom: 16.8rem;
-    background-color: #e6e6e6;
+    background-color: #521b1b8e;
     color: #757575;
     position: relative;
 }
