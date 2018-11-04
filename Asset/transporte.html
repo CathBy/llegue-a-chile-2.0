@@ -414,45 +414,40 @@
             <!-- row -->
             <div id="hot-post" class="row hot-post">
                 <div class="col-md-8 hot-post-left">
-                    <!-- post -->
+                    <!-- post Transantiago -->
                     <div class="post post-thumb">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="#modalTransantiago">
                             <img src="images/transporte.jpg" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
-                                <a href="category.html"></a>
+                                <a href="#modalTransantiago"></a>
                             </div>
-                            <h3 class="post-title title-lg">
-                                <a onclick="vermodal(1,'')"  >Transantiago. El transporte público mas usado en la Región Metropolitana. Conoce sus recorridos. </a>
-                            </h3>
-                            <!--<ul class="post-meta">
-                                <li>
-                                    <a href="author.html">Diario "La tercera"</a>
-                                </li>
-                                <li>Jueves 17 Junio 2018</li>-->
-                            </ul>
+                            <a href="#" data-toggle="modal" data-target="#modalTransantiago">
+                                Transantiago. El transporte público mas usado en la Región Metropolitana. Conoce sus recorridos.
+                              </a>
                         </div>
-                    </div>
-                    <!-- /post -->
+                    </div>                    
                 </div>
-                <div class="col-md-4 hot-post-right">
-                    <!-- post -->
+                <!-- /post Transantiago -->
+
+                <!-- post Aislado -->
+                <div class="col-md-4 hot-post-right">                    
                     <div class="post post-thumb">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="#modalAislado">
                             <img src="images/busRural.jpg" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
-                                <a href="category.html"></a>
+                                <a href="#modalAislado"></a>
                             </div>
-                            <h3 class="post-title">
-                                <a href="images/recorridosUrbano.PNG">Conoce recorridos en zonas rurales de nuestro país</a>
-                            </h3>                           
+                            <a href="#" data-toggle="modal" data-target="#modalAislado">
+                                    Conoce los recorridos para las zonas aisladas de la Región Metropoliana
+                            </a>                          
                           
                         </div>
                     </div>
-                    <!-- /post -->
+                    <!-- /post Aislado-->
 
                     <!-- post -->
                     <div class="post post-thumb">
@@ -1562,30 +1557,86 @@
     </div>
 
 
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-    Launch demo modal
+    <!-- Button trigger modal Transantiago -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTransantiago">
   </button>
   
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <!-- Modal Transantiago-->
+  <div class="modal fade" id="modalTransantiago" tabindex="-1" role="dialog" aria-labelledby="modalTransantiagoTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Información</h5>
+          <h5 class="modal-title" id="modalTransantiagoTitle">Información</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <h1 id="texto-model"></h1>          
+          <h1 id="texto-model">
+              probando
+          </h1>          
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 
       </div>
     </div>
   </div>
+
+
+  <!-- Button trigger modal Transantiago -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTransantiago">
+    </button>
+  
+  <!-- Modal Transantiago-->
+  <div class="modal fade" id="modalTransantiago" tabindex="-1" role="dialog" aria-labelledby="modalTransantiagoTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTransantiagoTitle">Información</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h1 id="texto-model">
+              probando
+          </h1>          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Button trigger modal Aislado -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAislado">
+</button>
+
+<!-- Modal Aislado-->
+<div class="modal fade" id="modalAislado" tabindex="-1" role="dialog" aria-labelledby="modalAisladoTitle" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="modalAisladoTitle">Información</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <h1 id="texto-model">
+          probando Aislado
+      </h1>          
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+  </div>
+</div>
+</div>
+
+  
 
 
     <!-- Java Script
