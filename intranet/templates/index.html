@@ -236,7 +236,7 @@
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                        <form method="POST" action="{% url " index " %}" role="login">
+                        <form method="POST" action="{% url "avisos" %}" role="login">
                             {% csrf_token %}
                             <img src="{% static 'images/logo.png' %}" class="img-responsive" alt="" />
                             <input type="email" name="nombre_usuario" placeholder="Email" required class="form-control input-lg" />
@@ -249,7 +249,7 @@
 
                             <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Ingresar</button>
                             <div>
-                                <a href="{% url " formulario " %}">Crear cuenta</a> or
+                                <a href="{% url "formulario" %}">Crear cuenta</a> or
                                 <a href="#">Olvidé mi contraseña</a>
                             </div>
 

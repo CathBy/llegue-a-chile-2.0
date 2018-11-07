@@ -17,6 +17,9 @@ def index(request):
 def registro(request):
     return render(request,'formulario.html', {})
 
+def avisos(request):
+    return render(request,'aviso.html',{})    
+
 def crear(request):
     rut = request.POST.get('rut','')
     correo = request.POST.get('correo','')
