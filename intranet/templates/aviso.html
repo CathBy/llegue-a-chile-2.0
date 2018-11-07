@@ -1,8 +1,9 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 
 <html class="no-js" lang="es-CL">
 
-{% load staticfiles %}
+
 
 <head>
 
@@ -35,8 +36,8 @@
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
 
     <!-- favicons
     ================================================== -->
@@ -220,9 +221,6 @@
                         </li>
                         <li>
                             <a href="#">Documentación</a>
-                        </li>
-                        <li>
-                            <a href="#">Ayudar</a>
                         </li>
                         <li class="nav-item">
                             <a class="btn btn-primary" href="{% url "cerrar_session" %}">Cerrar Sesion</a>
