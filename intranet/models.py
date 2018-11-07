@@ -11,15 +11,17 @@ class Persona(models.Model):
     def __str__(self):
         return "PERSONA"
 
-class Subscripcion(models.Model):
+class Suscripcion(models.Model):
     email = models.EmailField(max_length=100)
     def __str__(self):
         return "SUBSCRIPCION"
 
 class Aviso(models.Model):
     titulo = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=1000)
+    emailcontacto = models.EmailField(max_length=100)
     contacto = models.CharField(max_length=100)
+    descripcion = models.CharField(max_length=1000)
+    
     def __str__(self):
         return "AVISO"
       

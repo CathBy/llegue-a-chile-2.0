@@ -54,3 +54,13 @@ def entrar_iniciar(request):
         return redirect("adopcion")
     else:
         return redirect("index")  
+
+def crear_aviso(request):
+    titulo = request.POST.get('titulo','')
+    emailcontacto = request.POST.get('emailcontacto','')
+    contacto = request.POST.get('contacto','')
+    descripcion = request.POST.get('descripcion','')
+    aviso=Aviso(titulo=titulo,emailContacto=emailcontacto,contacto=contacto,descripcion=descripcion)
+    print(str(aviso))
+    aviso.save()
+    return redirect('aviso')

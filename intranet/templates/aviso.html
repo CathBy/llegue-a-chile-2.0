@@ -435,26 +435,26 @@
 
                 <h3 class="h6">Publica un aviso</h3>
 
-                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
+                <form name="contactForm" id="aviso" method="post" action="{% url 'crear_aviso' %}" novalidate="novalidate">
                     <fieldset>
-
+                        {% csrf_token %}
                         <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Tu nombre" value="" minlength="2" required="" aria-required="true"
+                            <input name="titulo" type="text" id="titulo" placeholder="Titulo del aviso" value="" minlength="2" required="" aria-required="true"
                                 class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Tu Email" value="" required="" aria-required="true"
+                            <input name="emailcontacto" type="email" id="emailcontacto" placeholder="Correo de contacto" value="" required="" aria-required="true"
                                 class="full-width">
                         </div>
                         <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Telefono" value="" class="full-width">
+                            <input name="contacto" type="text" id="contacto" placeholder="Telefono" value="" class="full-width">
                         </div>
                         <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Tu aviso" rows="10" cols="50" required="" aria-required="true"
+                            <textarea name="description" id="description" placeholder="Tu aviso" rows="10" cols="50" required="" aria-required="true"
                                 class="full-width"></textarea>
                         </div>
                         <div class="form-field">
-                            <button class="full-width btn--primary">Publicar</button>
+                            <button class="full-width btn--primary" type="submit">Publicar</button>
                             <div class="submit-loader">
                                 <div class="text-loader">Sending...</div>
                                 <div class="s-loader">
