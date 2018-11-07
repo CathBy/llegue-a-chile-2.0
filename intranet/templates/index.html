@@ -2,7 +2,8 @@
 
 <html class="no-js" lang="es-CL">
 
-    {% load staticfiles %}
+{% load staticfiles %}
+
 <head>
 
     <!--- basic page needs
@@ -25,11 +26,17 @@
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        -->
+    <!-- crossorigin="anonymous"> -->
 
     <!-- script
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -217,11 +224,39 @@
                         <li>
                             <a href="#">Ayudar</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</a>
+                        </li>
                     </ul>
                     <!-- /nav -->
                 </div>
             </div>
             <!-- /Main Nav -->
+            <!-- Modal login -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form method="POST" action="{% url " index " %}" role="login">
+                            {% csrf_token %}
+                            <img src="{% static 'images/logo.png' %}" class="img-responsive" alt="" />
+                            <input type="email" name="nombre_usuario" placeholder="Email" required class="form-control input-lg" />
+
+                            <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+
+
+                            <div class="pwstrength_viewport_progress"></div>
+
+
+                            <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Ingresar</button>
+                            <div>
+                                <a href="{% url " formulario " %}">Crear cuenta</a> or
+                                <a href="#">Olvidé mi contraseña</a>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
 
             <!-- Aside Nav -->
             <div id="nav-aside">
@@ -347,8 +382,8 @@
 
     <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width=3000
-        data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/hero-bg.jpg' %}"
+        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -453,7 +488,7 @@
     <!-- SECTION -->
     <div class="section">
         <!-- container -->
-        <div class="row section-header" data-aos="fade-up" data-parallax="scroll" >
+        <div class="row section-header" data-aos="fade-up" data-parallax="scroll">
             <div class="col-full">
                 <h3 class="subhead">Noticias</h3>
             </div>
@@ -923,92 +958,91 @@
                         <img class="img-responsive" src="images/885-escapada-a-chile-5900f8486ef0e.jpeg" alt="">
                     </a>
                 </div>
-                <
-                <!-- /ad widget -->
+                < <!-- /ad widget -->
 
-                <!-- social widget -->
-                <div class="aside-widget">
-                    <div class="section-title">
-                        <h2 class="title">Redes Sociales</h2>
+                    <!-- social widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Redes Sociales</h2>
+                        </div>
+                        <div class="social-widget">
+                            <ul>
+                                <li>
+                                    <a href="#" class="social-facebook">
+                                        <i class="fa fa-facebook"></i>
+                                        <span>21.2K
+                                            <br>Facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-twitter">
+                                        <i class="fa fa-twitter"></i>
+                                        <span>10.2K
+                                            <br>Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="social-google-plus">
+                                        <i class="fa fa-google-plus"></i>
+                                        <span>5K
+                                            <br>Google+</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="social-widget">
-                        <ul>
-                            <li>
-                                <a href="#" class="social-facebook">
-                                    <i class="fa fa-facebook"></i>
-                                    <span>21.2K
-                                        <br>Facebook</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="social-twitter">
-                                    <i class="fa fa-twitter"></i>
-                                    <span>10.2K
-                                        <br>Twitter</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="social-google-plus">
-                                    <i class="fa fa-google-plus"></i>
-                                    <span>5K
-                                        <br>Google+</span>
-                                </a>
-                            </li>
-                        </ul>
+                    <!-- /social widget -->
+
+                    <!-- category widget -->
+                    <div class="aside-widget">
+                        <div class="section-title">
+                            <h2 class="title">Categorias</h2>
+                        </div>
+                        <div class="category-widget">
+                            <ul>
+                                <li>
+                                    <a href="/Asset/trabajo.html">Trabajo
+                                        <span>451</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Vivienda
+                                        <span>230</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Educación
+                                        <span>40</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Salud
+                                        <span>38</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">Transporte
+                                        <span>24</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <!-- /social widget -->
+                    <!-- /category widget -->
 
-                <!-- category widget -->
-                <div class="aside-widget">
-                    <div class="section-title">
-                        <h2 class="title">Categorias</h2>
-                    </div>
-                    <div class="category-widget">
-                        <ul>
-                            <li>
-                                <a href="/Asset/trabajo.html">Trabajo
-                                    <span>451</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Vivienda
-                                    <span>230</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Educación
-                                    <span>40</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Salud
-                                    <span>38</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Transporte
-                                    <span>24</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- /category widget -->
+                    <!-- newsletter widget -->
 
-                <!-- newsletter widget -->
+                    <!-- /newsletter widget -->
 
-                <!-- /newsletter widget -->
-
-                <!-- post widget -->
-                <!--
+                    <!-- post widget -->
+                    <!--
                     <div class="aside-widget">
                         <div class="section-title">
                             <h2 class="title">Popular Posts</h2>
                         </div>
                     -->
-                <!-- post -->
-                <!--
+                    <!-- post -->
+                    <!--
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
                                 <img src="./img/widget-3.jpg" alt="">
@@ -1023,10 +1057,10 @@
                             </div>
                         </div>
                         -->
-                <!-- /post -->
+                    <!-- /post -->
 
-                <!-- post -->
-                <!--
+                    <!-- post -->
+                    <!--
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
                                 <img src="./img/widget-2.jpg" alt="">
@@ -1042,10 +1076,10 @@
                             </div>
                         </div>
                         -->
-                <!-- /post -->
+                    <!-- /post -->
 
-                <!-- post -->
-                <!--
+                    <!-- post -->
+                    <!--
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
                                 <img src="./img/widget-4.jpg" alt="">
@@ -1060,10 +1094,10 @@
                             </div>
                         </div>
                         -->
-                <!-- /post -->
+                    <!-- /post -->
 
-                <!-- post -->
-                <!--
+                    <!-- post -->
+                    <!--
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
                                 <img src="./img/widget-5.jpg" alt="">
@@ -1079,7 +1113,7 @@
                             </div>
                         </div>
                         -->
-                <!-- /post -->
+                    <!-- /post -->
             </div>
             <!-- /post widget -->
         </div>
@@ -1094,7 +1128,7 @@
     ================================================== -->
     <br>
     <section id="clients" class="s-clients">
-        
+
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Avisos</h3>
@@ -1160,7 +1194,8 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Departamento HomeStudio ubicado a 2 minutos caminando de la estación de Metro Santa
-                                            Ana.</h5>
+                                            Ana.
+                                        </h5>
                                         <p class="card-text">Cuenta con un living, cocina equipada de tipo americana, cama de 2 plazas, 2 veladores,
                                             clóset, baño y balcón. El departamento tiene 30 m² aproximadamente. El edificio
                                             tiene servicios como gimnasio, piscina, quincho para hacer carne asada (barbecue),
@@ -1174,7 +1209,8 @@
                                             entre otras) e institutos profesionales. El barrio Brasil se encuentra a unos
                                             8 minutos caminando del lugar, se caracteriza por su gran variedad de bares,
                                             cafés y restoranes. Es posible incluir estacionamiento por un valor extra. Valor
-                                            $270.000</p>
+                                            $270.000
+                                        </p>
                                         <a href="#" class="btn btn-primary">Contactar!</a>
                                     </div>
                                 </div>
@@ -1193,132 +1229,55 @@
 
     </section>
     <!-- end s-clients -->
+    <div class="contact-secondary">
+        <div class="contact-info">
 
-
-    <!-- contact
-    ================================================== -->
-    <section id="contact" class="s-contact">
-
-        <div class="overlay"></div>
-        <div class="contact__line"></div>
-
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead">Ayudemos juntos!. Dejamos tu aviso de ayuda, ya sea sobre un empleo, un alquiler o cualquier otra información
-                    de ayuda para migrantes. "No olvides dejar un numero o correo de contacto"</h3>
-                <h3 class="display-2 display-2--light">Publicar Aviso</h3>
-            </div>
-        </div>
-
-        <div class="row contact-content" data-aos="fade-up">
-
-            <div class="contact-primary">
-
-                <h3 class="h6">Publica un aviso</h3>
-
-                <form name="contactForm" id="contactForm" method="post" action="" novalidate="novalidate">
-                    <fieldset>
-
-                        <div class="form-field">
-                            <input name="contactName" type="text" id="contactName" placeholder="Tu nombre" value="" minlength="2" required="" aria-required="true"
-                                class="full-width">
-                        </div>
-                        <div class="form-field">
-                            <input name="contactEmail" type="email" id="contactEmail" placeholder="Tu Email" value="" required="" aria-required="true"
-                                class="full-width">
-                        </div>
-                        <div class="form-field">
-                            <input name="contactSubject" type="text" id="contactSubject" placeholder="Telefono" value="" class="full-width">
-                        </div>
-                        <div class="form-field">
-                            <textarea name="contactMessage" id="contactMessage" placeholder="Tu aviso" rows="10" cols="50" required="" aria-required="true"
-                                class="full-width"></textarea>
-                        </div>
-                        <div class="form-field">
-                            <button class="full-width btn--primary">Publicar</button>
-                            <div class="submit-loader">
-                                <div class="text-loader">Sending...</div>
-                                <div class="s-loader">
-                                    <div class="bounce1"></div>
-                                    <div class="bounce2"></div>
-                                    <div class="bounce3"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </form>
-
-                <!-- contact-warning -->
-                <div class="message-warning">
-                    Tuvimos algunos problemas. Intenta más tarde.
+            <div class="aside-widget">
+                <div class="section-title">
+                    <h2 class="title">Contactenos</h2>
                 </div>
-
-                <!-- contact-success -->
-                <div class="message-success">
-                    Tu publicación fue enviada!
-                    <br>
+                <div class="newsletter-widget">
+                    <form>
+                        <p>Si quieres recibir noticias y documentación de ayuda subscribete!</p>
+                        <input class="input" name="newsletter" placeholder="Ingrese su correo">
+                        <button class="primary-button">Subscribe</button>
+                    </form>
                 </div>
-
             </div>
-            <!-- end contact-primary -->
 
-            <div class="contact-secondary">
-                <div class="contact-info">
-
-                    <div class="aside-widget">
-                        <div class="section-title">
-                            <h2 class="title">Contactenos</h2>
-                        </div>
-                        <div class="newsletter-widget">
-                            <form>
-                                <p>Si quieres recibir noticias y documentación de ayuda subscribete!</p>
-                                <input class="input" name="newsletter" placeholder="Ingrese su correo">
-                                <button class="primary-button">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <ul class="contact-social">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-behance" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-dribbble" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end contact-social -->
-
-                </div>
-                <!-- end contact-info -->
-            </div>
-            <!-- end contact-secondary -->
+            <ul class="contact-social">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-behance" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- end contact-social -->
 
         </div>
-        <!-- end contact-content -->
-
-    </section>
-    <!-- end s-contact -->
-
+        <!-- end contact-info -->
+    </div>
+    <!-- end contact-secondary -->
 
     <!-- footer
     ================================================== -->
@@ -1335,8 +1294,8 @@
                 </div>
 
                 <div class="go-top">
-                    <a class="smoothscroll" title="Subir" href="#top" >
-                            <img src="images/up.png" alt="">
+                    <a class="smoothscroll" title="Subir" href="#top">
+                        <img src="images/up.png" alt="">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>
                 </div>

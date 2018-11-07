@@ -17,15 +17,6 @@ def index(request):
 def registro(request):
     return render(request,'formulario.html', {})
 
-def adopcion(request):
-    return render(request, 'adopcion.html', {})   
-
-def mantenedor(request):
-    return render(request, 'mantenedor.html', {}) 
-
-def password_recovery(request):
-    return render(request,'password_reset_form.html')
-
 def crear(request):
     rut = request.POST.get('rut','')
     correo = request.POST.get('correo','')
