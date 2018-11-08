@@ -13,5 +13,6 @@ urlpatterns = [
     path('entrar',views.entrar,name="entrar"),
     path('cerrar_session',views.cerrar_session,name="cerrar_session"),
     path('entrar/iniciar',views.entrar_iniciar,name="iniciar"),
-    path('avisos',views.avisos,name='avisos')
+    path('avisos',views.avisos,name='avisos'),
+    path('avisos/crear_aviso',views.avisos,name='crear_aviso')
 ]

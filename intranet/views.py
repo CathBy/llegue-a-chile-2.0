@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Persona,Subscripcion,Aviso
+from .models import Persona,Suscripcion,Aviso
 from django.shortcuts import redirect
 from datetime import datetime
 

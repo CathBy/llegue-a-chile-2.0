@@ -27,17 +27,11 @@
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         -->
     <!-- crossorigin="anonymous"> -->
 
-    <!-- script
-    ================================================== -->
-    <script src="{% static 'js/modernizr.js' %}"></script>
-    <script src="{% static 'js/pace.min.js' %}"></script>
-    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
-    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
 
     <!-- favicons
     ================================================== -->
@@ -490,7 +484,7 @@
                             <h2 class="title">Contactenos</h2>
                         </div>
                         <div class="newsletter-widget">
-                            <form>
+                            <form action="{% url 'crear' %}" method="POST">
                                 <p>Si quieres recibir noticias y documentación de ayuda subscribete!</p>
                                 <input class="input" name="newsletter" placeholder="Ingrese su correo">
                                 <button class="primary-button">Subscribe</button>
@@ -555,7 +549,7 @@
 
                 <div class="go-top">
                     <a class="smoothscroll" title="Subir" href="#top">
-                        <img src="images/up.png" alt="">
+                        <img src="{% static 'images/up.png' %}" alt="">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -626,6 +620,12 @@
         </div>
     </div>
 
+     <!-- script
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <!-- Java Script
     ================================================== -->

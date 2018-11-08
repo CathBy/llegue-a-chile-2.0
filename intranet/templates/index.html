@@ -33,12 +33,7 @@
         -->
     <!-- crossorigin="anonymous"> -->
 
-    <!-- script
-    ================================================== -->
-    <script src="{% static 'js/modernizr.js' %}"></script>
-    <script src="{% static 'js/pace.min.js' %}"></script>
-    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
-    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
+   
 
     <!-- favicons
     ================================================== -->
@@ -224,7 +219,7 @@
                             <a href="#">Documentación</a>
                         </li>
                         <li class="nav-item">
-                            <a class="has-dropdown" data-toggle="modal" data-target="#exampleModal">Login</a>
+                            <a class="has-dropdown" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
                         </li>
                     </ul>
                     <!-- /nav -->
@@ -1090,7 +1085,7 @@
 
                 <div class="go-top">
                     <a class="smoothscroll" title="Subir" href="#top">
-                        <img src="images/up.png" alt="">
+                        <img src="{% static 'images/up.png' %}" alt="">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -1189,6 +1184,12 @@
 
     <!-- Java Script
     ================================================== -->
+     <!-- script
+    ================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/argon.js' %}"></script>

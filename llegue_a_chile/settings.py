@@ -118,6 +118,11 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Email related stuff
+EMAIL_HOST = 'smt.gmail.com'
+EMAIL_HOST_USER = 'llegue.a.Chile@gmail.com'
+EMAIL_HOST_PASSWORD = '65936888'
+EMAIL_USE_TLS = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/

@@ -14,7 +14,7 @@ class Persona(models.Model):
 class Suscripcion(models.Model):
     email = models.EmailField(max_length=100)
     def __str__(self):
-        return "SUBSCRIPCION"
+        return "SUSCRIPCION"
 
 class Aviso(models.Model):
     titulo = models.CharField(max_length=100)
