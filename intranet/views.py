@@ -20,6 +20,12 @@ def registro(request):
 def avisos(request):
     return render(request,'aviso.html',{})    
 
+def trabajo(request):
+    return render(request,'trabajo.html',{})
+
+def transporte(request):
+    return render(request,'transporte.html',{})
+
 def crear(request):
     rut = request.POST.get('rut','')
     correo = request.POST.get('correo','')

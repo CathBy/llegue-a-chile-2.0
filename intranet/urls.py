@@ -14,6 +14,8 @@ urlpatterns = [
     path('cerrar_session',views.cerrar_session,name="cerrar_session"),
     path('entrar/iniciar',views.entrar_iniciar,name="iniciar"),
     path('avisos',views.avisos,name='avisos'),
-    path('avisos/crear_aviso',views.avisos,name='crear_aviso')
+    path('avisos/crear_aviso',views.avisos,name='crear_aviso'),
+    path('trabajo',views.trabajo,name='trabajo'),
+    path('transporte',views.transporte,name='transporte')
 ]
 

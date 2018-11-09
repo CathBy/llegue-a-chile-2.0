@@ -1,4 +1,4 @@
-
+{% load staticfiles %}
 
 <!DOCTYPE html>
 
@@ -78,7 +78,7 @@
                     <!-- logo -->
                     <div class="nav-logo">
                         <a href="index.html" class="logo">
-                            <img src="images/logo.png" alt="">
+                            <img src="{% static 'images/logo.png' %}" alt="">
                         </a>
                     </div>
                     <!-- /logo -->
@@ -111,7 +111,7 @@
                     <!-- nav -->
                     <ul class="nav-menu">
                         <li class="has-dropdown">
-                            <a href="index.html">Home</a>
+                            <a href="{% url 'index' %}">Home</a>
                         </li>
                         <li class="has-dropdown">
                             <a href="#about">Presentación</a>
@@ -126,7 +126,7 @@
                                             <h4 class="dropdown-heading">Categorias</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="trabajo.html">Trabajo</a>
+                                                    <a href="{% url 'trabajo' %}">Trabajo</a>
                                                 </li>
                                                 <li>
                                                     <a href="#">Vivienda</a>
@@ -138,7 +138,7 @@
                                                     <a href="#">Salud</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Transporte</a>
+                                                    <a href="{% url 'transporte' %}">Transporte</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -225,47 +225,7 @@
             </div>
             <!-- /Main Nav -->
 
-            <!-- Aside Nav -->
-            <div id="nav-aside">
-                <ul class="nav-aside-menu">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="has-dropdown">
-                        <a>Chile</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Lifestyle</a>
-                            </li>
-                            <li>
-                                <a href="#">Fashion</a>
-                            </li>
-                            <li>
-                                <a href="#">Technology</a>
-                            </li>
-                            <li>
-                                <a href="#">Travel</a>
-                            </li>
-                            <li>
-                                <a href="#">Health</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="about.html">About Us</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contacts</a>
-                    </li>
-                    <li>
-                        <a href="#">Advertise</a>
-                    </li>
-                </ul>
-                <button class="nav-close nav-aside-close">
-                    <span></span>
-                </button>
-            </div>
-            <!-- /Aside Nav -->
+            
         </div>
 
         <nav class="header-nav">
@@ -279,7 +239,7 @@
 
                 <ul class="header-nav__list">
                     <li class="current">
-                        <a class="smoothscroll" href="#home" title="home">Home</a>
+                        <a class="smoothscroll" href="{% url 'index' %}" title="home">Home</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">Presentación</a>
@@ -288,7 +248,7 @@
                         <a class="dropdown-item" href="#">Noticias</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Trabajo</a>
+                        <a class="dropdown-item" href="{% url 'trabajo' %}">Trabajo</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">Vivienda</a>
@@ -300,7 +260,7 @@
                         <a class="dropdown-item" href="#">Salud</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Transporte</a>
+                        <a class="dropdown-item" href="{% url 'transporte' %}">Transporte</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#">Conocer</a>
