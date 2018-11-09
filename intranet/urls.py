@@ -16,3 +16,4 @@ urlpatterns = [
     path('avisos',views.avisos,name='avisos'),
     path('avisos/crear_aviso',views.avisos,name='crear_aviso')
 ]
+

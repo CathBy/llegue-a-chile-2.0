@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <html class="no-js" lang="es-CL">
@@ -18,23 +20,23 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/argon.css">
-    <link rel="stylesheet" href="css/argon.min.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/argon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/argon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
-    <script src="js/pace.min.js"></script>
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js"></script>
 
     <!-- favicons
     ================================================== -->
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
 
 </head>
 
@@ -76,7 +78,7 @@
                     <!-- logo -->
                     <div class="nav-logo">
                         <a href="index.html" class="logo">
-                            <img src="images/logo.png" alt="">
+                            <img src="{% static 'images/logo.png' %}" alt="">
                         </a>
                     </div>
                     <!-- /logo -->
@@ -227,7 +229,7 @@
             <div id="nav-aside">
                 <ul class="nav-aside-menu">
                     <li>
-                        <a href="index.html">Home<La mitad de las pymes chilenas dice tener trabajadores extranjeros/a>
+                        <a href="index.html">Home< La mitad de las pymes chilenas dice tener trabajadores extranjeros/a>
                     </li>
                     <li class="has-dropdown">
                         <a>Chile</a>
@@ -346,7 +348,7 @@
 
      <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/transporte.jpg" data-natural-width=3000
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/transporte.jpg' %}" data-natural-width=3000
         data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
@@ -393,7 +395,7 @@
                 <div class="dropdown">
                     <li href="#0">
                         <i class="icon-settings" aria-hidden="true">
-                            <img src="images/idiomas.png" alt="">
+                            <img src="{% static 'images/idiomas.png' %}" alt="">
                         </i>
                         <span>Language</span>
                     </li>
@@ -417,7 +419,7 @@
                     <!-- post Transantiago -->
                     <div class="post post-thumb">
                         <a class="post-img" href="#modalTransantiago">
-                            <img src="images/transporte.jpg" alt="">
+                            <img src="{% static 'images/transporte.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -435,7 +437,7 @@
                 <div class="col-md-4 hot-post-right">                    
                     <div class="post post-thumb">
                         <a class="post-img" href="#modalAislado">
-                            <img src="images/busRural.jpg" alt="">
+                            <img src="{% static 'images/busRural.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -452,12 +454,12 @@
                     <!-- post -->
                     <div class="post post-thumb">
                         <a class="post-img" href="blog-post.html">
-                            <img src="images/metroSantigo.jpg" alt="">
+                            <img src="{% static 'images/metroSantigo.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                           
                             <h3 class="post-title">
-                                <a href="images/recorridoMetro.jpg" >Recorridos Metro Santiago</a>
+                                <a href="{% static 'images/recorridoMetro.jpg' %}" >Recorridos Metro Santiago</a>
                             </h3>
                             <ul class="post-meta">
                                
@@ -492,7 +494,7 @@
                         <div class="col-md-6">
                             <div class="post">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="images/ventas-trabajo.jpg" alt="">
+                                    <img src="{% static 'images/ventas-trabajo.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -516,7 +518,7 @@
                         <div class="col-md-6">
                             <div class="post">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="images/construccion-trabajo.jpg" alt="">
+                                    <img src="{% static 'images/construccion-trabajo.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -543,7 +545,7 @@
                         <div class="col-md-6">
                             <div class="post">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="images/restaurant-trabajo.jpg" alt="">
+                                    <img src="{% static 'images/restaurant-trabajo.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -567,7 +569,7 @@
                         <div class="col-md-6">
                             <div class="post">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-7.jpg" alt="">
+                                    <img src="{% static './img/post-7.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -601,7 +603,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-9.jpg" alt="">
+                                    <img src="{% static './img/post-9.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -625,7 +627,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-8.jpg" alt="">
+                                    <img src="{% static './img/post-8.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -650,7 +652,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-11.jpg" alt="">
+                                    <img src="{% static './img/post-11.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -683,7 +685,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-10.jpg" alt="">
+                                    <img src="{% static './img/post-10.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -707,7 +709,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-12.jpg" alt="">
+                                    <img src="{% static './img/post-12.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -731,7 +733,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-13.jpg" alt="">
+                                    <img src="{% static './img/post-13.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -765,7 +767,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-4.jpg" alt="">
+                                    <img src="{% static './img/post-4.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -789,7 +791,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-1.jpg" alt="">
+                                    <img src="{% static './img/post-1.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -813,7 +815,7 @@
                         <div class="col-md-4">
                             <div class="post post-sm">
                                 <a class="post-img" href="blog-post.html">
-                                    <img src="./img/post-3.jpg" alt="">
+                                    <img src="{% static './img/post-3.jpg' %}" alt="">
                                 </a>
                                 <div class="post-body">
                                     <div class="post-category">
@@ -839,7 +841,7 @@
                     <!-- ad widget-->
                     <div class="aside-widget text-center">
                         <a href="#" style="display: inline-block;margin: auto;">
-                            <img class="img-responsive" src="./img/ad-3.jpg" alt="">
+                            <img class="img-responsive" src="{% static './img/ad-3.jpg' %}" alt="">
                         </a>
                     </div>
                     <!-- /ad widget -->
@@ -937,7 +939,7 @@
                         <!-- post -->
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
-                                <img src="./img/widget-3.jpg" alt="">
+                                <img src="{% static './img/widget-3.jpg' %}" alt="">
                             </a>
                             <div class="post-body">
                                 <div class="post-category">
@@ -953,7 +955,7 @@
                         <!-- post -->
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
-                                <img src="./img/widget-2.jpg" alt="">
+                                <img src="{% static './img/widget-2.jpg' %}" alt="">
                             </a>
                             <div class="post-body">
                                 <div class="post-category">
@@ -970,7 +972,7 @@
                         <!-- post -->
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
-                                <img src="./img/widget-4.jpg" alt="">
+                                <img src="{% static './img/widget-4.jpg' %}" alt="">
                             </a>
                             <div class="post-body">
                                 <div class="post-category">
@@ -986,7 +988,7 @@
                         <!-- post -->
                         <div class="post post-widget">
                             <a class="post-img" href="blog-post.html">
-                                <img src="./img/widget-5.jpg" alt="">
+                                <img src="{% static './img/widget-5.jpg' %}" alt="">
                             </a>
                             <div class="post-body">
                                 <div class="post-category">
@@ -1018,7 +1020,7 @@
                 <!-- ad -->
                 <div class="col-md-12 section-row text-center">
                     <a href="#" style="display: inline-block;margin: auto;">
-                        <img class="img-responsive" src="./img/ad-2.jpg" alt="">
+                        <img class="img-responsive" src="{% static './img/ad-2.jpg' %}" alt="">
                     </a>
                 </div>
                 <!-- /ad -->
@@ -1042,7 +1044,7 @@
                     <!-- post -->
                     <div class="post">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-6.jpg" alt="">
+                            <img src="{% static './img/post-6.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1069,7 +1071,7 @@
                     <!-- post -->
                     <div class="post">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-5.jpg" alt="">
+                            <img src="{% static './img/post-5.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1095,7 +1097,7 @@
                     <!-- post -->
                     <div class="post">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-9.jpg" alt="">
+                            <img src="{% static './img/post-9.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1123,7 +1125,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-1.jpg" alt="">
+                            <img src="{% static './img/widget-1.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1139,7 +1141,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-2.jpg" alt="">
+                            <img src="{% static './img/widget-2.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1156,7 +1158,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-3.jpg" alt="">
+                            <img src="{% static './img/widget-3.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1173,7 +1175,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-4.jpg" alt="">
+                            <img src="{% static './img/widget-4.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1189,7 +1191,7 @@
                     <!-- /post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-5.jpg" alt="">
+                            <img src="{% static './img/widget-5.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1206,7 +1208,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-6.jpg" alt="">
+                            <img src="{% static './img/widget-6.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1224,7 +1226,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-8.jpg" alt="">
+                            <img src="{% static './img/widget-8.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1240,7 +1242,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-9.jpg" alt="">
+                            <img src="{% static './img/widget-9.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1256,7 +1258,7 @@
                     <!-- post -->
                     <div class="post post-widget">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/widget-10.jpg" alt="">
+                            <img src="{% static './img/widget-10.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1286,7 +1288,7 @@
                     <!-- post -->
                     <div class="post post-row">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-13.jpg" alt="">
+                            <img src="{% static './img/post-13.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1311,7 +1313,7 @@
                     <!-- post -->
                     <div class="post post-row">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-1.jpg" alt="">
+                            <img src="{% static './img/post-1.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1335,7 +1337,7 @@
                     <!-- post -->
                     <div class="post post-row">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-5.jpg" alt="">
+                            <img src="{% static './img/post-5.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1359,7 +1361,7 @@
                     <!-- post -->
                     <div class="post post-row">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-6.jpg" alt="">
+                            <img src="{% static './img/post-6.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1384,7 +1386,7 @@
                     <!-- post -->
                     <div class="post post-row">
                         <a class="post-img" href="blog-post.html">
-                            <img src="./img/post-7.jpg" alt="">
+                            <img src="{% static './img/post-7.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -1420,32 +1422,32 @@
                             <ul>
                                 <li>
                                     <a href="#">
-                                        <img src="./img/galery-1.jpg" alt="">
+                                        <img src="{% static './img/galery-1.jpg' %}" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="./img/galery-2.jpg" alt="">
+                                        <img src="{% static './img/galery-2.jpg' %}" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="./img/galery-3.jpg" alt="">
+                                        <img src="{% static './img/galery-3.jpg' %}" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="./img/galery-4.jpg" alt="">
+                                        <img src="{% static './img/galery-4.jpg' %}" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="./img/galery-5.jpg" alt="">
+                                        <img src="{% static './img/galery-5.jpg' %}" alt="">
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="./img/galery-6.jpg" alt="">
+                                        <img src="{% static './img/galery-6.jpg' %}" alt="">
                                     </a>
                                 </li>
                             </ul>
@@ -1456,7 +1458,7 @@
                     <!-- Ad widget -->
                     <div class="aside-widget text-center">
                         <a href="#" style="display: inline-block;margin: auto;">
-                            <img class="img-responsive" src="./img/ad-1.jpg" alt="">
+                            <img class="img-responsive" src="{% static './img/ad-1.jpg' %}" alt="">
                         </a>
                     </div>
                     <!-- /Ad widget -->
@@ -1641,12 +1643,12 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/argon.js"></script>
-    <script src="js/argon.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/argon.js' %}"></script>
+    <script src="{% static 'js/argon.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 

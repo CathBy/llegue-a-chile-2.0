@@ -64,3 +64,4 @@ def crear_aviso(request):
     print(str(aviso))
     aviso.save()
     return redirect('aviso')
+
