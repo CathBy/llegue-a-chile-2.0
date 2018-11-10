@@ -27,12 +27,12 @@
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         -->
     <!-- crossorigin="anonymous"> -->
 
-
+    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
     <!-- favicons
     ================================================== -->
     <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
@@ -429,7 +429,7 @@
 
                 <h3 class="h6">Publica un aviso</h3>
 
-                <form name="contactForm" id="aviso" method="post" action="{% url 'crear_aviso' %}" novalidate="novalidate">
+                <form name="contactForm" id="aviso" method="POST" action="{% url 'crear_aviso' %}">
                     <fieldset>
                         {% csrf_token %}
                         <div class="form-field">
@@ -444,19 +444,11 @@
                             <input name="contacto" type="text" id="contacto" placeholder="Telefono" value="" class="full-width">
                         </div>
                         <div class="form-field">
-                            <textarea name="description" id="description" placeholder="Tu aviso" rows="10" cols="50" required="" aria-required="true"
+                            <textarea name="description" id="descripcion" placeholder="Tu aviso" rows="10" cols="50" required="" aria-required="true"
                                 class="full-width"></textarea>
                         </div>
                         <div class="form-field">
                             <button class="full-width btn--primary" type="submit">Publicar</button>
-                            <div class="submit-loader">
-                                <div class="text-loader">Sending...</div>
-                                <div class="s-loader">
-                                    <div class="bounce1"></div>
-                                    <div class="bounce2"></div>
-                                    <div class="bounce3"></div>
-                                </div>
-                            </div>
                         </div>
 
                     </fieldset>
@@ -624,8 +616,8 @@
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
+    
 
     <!-- Java Script
     ================================================== -->

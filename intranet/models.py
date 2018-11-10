@@ -1,4 +1,5 @@
 from django.db import models
+from django.views import generic
 
 class Persona(models.Model):
     
@@ -24,5 +25,6 @@ class Aviso(models.Model):
     
     def __str__(self):
         return "AVISO"
-      
+
+
 

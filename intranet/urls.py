@@ -16,6 +16,11 @@ urlpatterns = [
     path('avisos',views.avisos,name='avisos'),
     path('avisos/crear_aviso',views.avisos,name='crear_aviso'),
     path('trabajo',views.trabajo,name='trabajo'),
-    path('transporte',views.transporte,name='transporte')
+    path('transporte',views.transporte,name='transporte'),
+    path('documentacion',views.documentacion,name='documentacion'),
+    path('conocer',views.conocer,name='conocer'),
+    path('educacion',views.educacion,name='educacion'),
+    path('salud',views.salud,name='salud'),
+    path('vivienda',views.vivienda,name='vivienda'),
 ]
 
