@@ -1,0 +1,469 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="es-CL">
+
+
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Llegue a Chile</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/argon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/argon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% load static %}
+    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        -->
+    <!-- crossorigin="anonymous"> -->
+
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+</head>
+{% load staticfiles %}
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+        <div id="nav">
+            <!-- Top Nav -->
+            <div id="nav-top">
+                <div class="container">
+
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+
+                </div>
+            </div>
+            <!-- /Top Nav -->
+
+            <!-- Main Nav -->
+            <div id="nav-bottom">
+                <div class="container">
+                    <!-- nav -->
+                    <ul class="nav-menu">
+                        <li class="has-dropdown">
+                            <a href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#about">Presentación</a>
+
+                        </li>
+                        <li class="has-dropdown megamenu">
+                            <a href="#">Chile</a>
+                            <div class="dropdown">
+                                <div class="dropdown-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Categorias</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Trabajo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Vivienda</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Educación</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Salud</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Transporte</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Trabajo</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Trabajador/a</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Emprender</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Empleado/a Domestica</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Embarazo</a>
+                                                </li>
+                                            </ul>
+                                            <h4 class="dropdown-heading">Vivienda</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Subsidio habitacional</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Alquileres</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Educación</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Básica y media</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Universitaria</a>
+                                                </li>
+                                            </ul>
+                                            <h4 class="dropdown-heading">Salud</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Derechos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Pública</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Privada</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Transporte</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Transantiago</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Metro</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Ciclovias</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{% url 'conocer' %}">Conocer</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="has-dropdown" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
+                        </li>
+                    </ul>
+                    <!-- /nav -->
+                </div>
+            </div>
+            <!-- /Main Nav -->
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close">
+                <span>Close</span>
+            </a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current">
+                        <a class="smoothscroll" href="#home" title="home">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#about">Presentación</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'trabajo' %}">Trabajo</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'vivienda' %}">Vivienda</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'educacion' %}">Educación</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'salud' %}">Salud</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'transporte' %}">Transporte</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'conocer' %}">Conocer</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="{% url 'documentacion' %}">Documentación</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- end header-nav__content -->
+
+        </nav>
+        <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text"></span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header>
+    <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/salud.jpg' %}"
+        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+
+            <div class="row home-content__main">
+
+                <h3>Bienvenido a Llegué a Chile!</h3>
+
+                <h1>
+                    Guía para migrantes
+                    <br> Informáte sobre los beneficios de salud.
+
+                </h1>
+
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Ir abajo</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div>
+        <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <div class="dropdown">
+                    <li href="#0">
+                        <i class="icon-settings" aria-hidden="true">
+                            <img src="{% static 'images/idiomas.png' %}" alt="">
+                        </i>
+                        <span>Language</span>
+                    </li>
+
+                </div>
+            </li>
+
+        </ul>
+        <!-- end home-social -->
+
+    </section>
+    <!-- end s-home -->
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">LA SALUD ES UN DERECHO DE TODAS LAS PERSONAS.</h3>
+                </div>
+
+            </div>
+
+            <div style='text-align:center;'>
+                <img src="{% static 'images/salute.jpg' %}" />
+            </div>
+            <br><br>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">¿QUÉ GARANTÍAS DE SALUD TENEMOS LAS PERSONAS INMIGRANTES?
+                    </h3>
+
+                </div>
+
+            </div>
+
+            <p class="lead">
+                Chile garantiza a las personas extranjeras el acceso a la atención de salud en iguales condiciones que las nacionales.
+
+            </p>
+
+
+
+            <p class="lead">
+                Quienes son refugiados tienen cobertura total y directa al sistema de salud, por convenio especial entre el Fondo Nacional
+                de Salud (FONASA) y el Ministerio del Interior y Seguridad Pública.
+
+            </p>
+
+
+            <p class="lead">
+                Asimismo, en el marco de otras normativas ministeriales y convenio con el Ministerio del Interior y Seguridad Pública:
+            </p>
+
+
+            <p class="lead">
+                »» Se asegura la atención de salud a niños, niñas y adolescentes y a mujeres embarazadas, no importando su situación migratoria.
+            </p>
+
+
+
+            <p class="lead">
+                »» Se establece que la atención de urgencia no puede ser negada por motivo alguno.
+
+            </p>
+
+            <p class="lead">
+                El Decreto Supremo Nº 67, de marzo de 2016, reconoce el derecho de las personas migrantes sin documentos o sin permiso de
+                residencia a acceder a los servicios públicos de salud en iguales condiciones que la población nacional.
+            </p>
+            <p class="lead">
+                Quienes se encuentren indocumentados y no cuenten con recursos económicos pueden registrarse como beneficiarios de FONASA
+                (tramo “A”). Para ello deben acercarse al consultorio de salud con algún documento de identidad (pasaporte
+                o cédula de identidad de su país) y solicitar el servicio.
+            </p>
+            <div class="col-md-12">
+                <div style='text-align:center;'>
+                    <img src="{% static 'images/map2.png' %}" />
+                </div>
+
+            </div>
+
+            <p class="lead">
+                Para poder acceder a la atención médica hay que inscribirse en alguno de los dos subsistemas existentes en Chile:
+            </p>
+            <p class="lead">
+                »» El sistema público, más conocido como Fondo Nacional de Salud (FONASA).
+            </p>
+            <p class="lead">
+                »» El sistema privado, más conocido como ISAPRES (Instituciones de salud previsional).
+            </p>
+            <p class="lead">
+                Si eres trabajador/a dependiente debes cotizar el 7% de tu renta imponible para la salud. Puedes escoger hacerlo en FONASA
+                o en la ISAPRE que tú elijas.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/informacion.png' %}" />
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <p class="lead">
+                Para más información, visita www.minsal.cl/salud-del-inmigrante/
+            </p>
+        </div>
+
+    </div>
+
+    <!-- end s-clients -->
+    <div class="row">
+
+        <div class="contact-info col-md-12">
+
+            <div class="aside-widget">
+                <div class="section-title">
+                    <h2 class="title">Contactenos</h2>
+                </div>
+                <div class="newsletter-widget">
+                    <form>
+                        <h3>Entérate de las novedades de nuestra página, suscribete!</h3>
+                        <input class="input" name="newsletter" placeholder="Ingrese su correo">
+                        <button class="primary-button">Suscribete</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- end contact-info -->
+
+    </div>
+    <!-- end contact-secondary -->
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Glint 2017</span>
+                    <span>Site Template by
+                        <a href="https://www.colorlib.com/">Colorlib</a>
+                    </span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Subir" href="#top">
+                        <img src="{% static 'images/up.png' %}" alt="">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- end footer-bottom -->
+
+    </footer>
+    <!-- end footer -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <!-- script
+    ================================================== -->
+    {% load static %}
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/argon.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.js' %}"></script>
+    <script src="{% static 'js/argon.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
