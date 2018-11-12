@@ -18,7 +18,7 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <!-- CSS
+    <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/argon.css' %}">
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         -->
     <!-- crossorigin="anonymous"> -->
-    
+
     <!-- script
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
@@ -178,7 +178,7 @@
                         <li>
                             <a href="{% url 'documentacion' %}">Documentación</a>
                         </li>
-                        
+
                     </ul>
                     <!-- /nav -->
                 </div>
@@ -365,6 +365,205 @@
         <!-- /container -->
     </div>
     <!-- /SECTION -->
+    <div class="container-fluid" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-full">
+                <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="Autoempleo-tab" data-toggle="pill" href="#Autoempleo" role="tab" aria-controls="Autoempleo"
+                            aria-selected="true">Autoempleo y emprendimieto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Derechos-tab" data-toggle="pill" href="#Derechos" role="tab" aria-controls="Derechos" aria-selected="false">Derechos Laborales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Casa-tab" data-toggle="pill" href="#Casa" role="tab" aria-controls="Casa" aria-selected="false">Trabajadores de casa particular</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr noshade style="margin-top:-20px;">
+        <div class="container">
+            <div class="tab-content" id="pills-tabContent">
+
+                <!-- autoempleo -->
+                <div class="tab-pane fade show active" id="Autoempleo" role="tabpanel" aria-labelledby="Autoempleo-tab">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">TRABAJADOR/A INDEPENDIENTE</h3>
+                                </div>
+                            </div>
+                            <div>
+                                <div style='text-align:center;'>
+                                    <img src="{% static 'images/independiente.jpg' %}" />
+                                </div>
+
+                            </div>
+                            <p class="lead">
+                                Una vez radicado en Chile, es posible que consideres trabajar como independiente, es decir, trabajar por cuenta propia, por
+                                ejemplo, realizando labores de manera autónoma (autoempleo) o montando una pequeña empresa,
+                                vale decir, convertirte en un/a microempresario/a.
+
+                            </p>
+                            <p class="lead">
+                                Tal y como vimos en el capítulo anterior, trabajar como independiente o por cuenta propia significa que no estás sujeto/a
+                                exclusivamente a un/a empleador/a. Por ejemplo, un gasfíter que trabaja a domicilio o un/a
+                                dueño/a de almacén.
+
+                            </p>
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">COMO TRABAJADOR/A INDEPENDIENTE, ¿TENGO DERECHO AL PRE Y POSTNATAL?
+                                    </h3>
+                                </div>
+                            </div>
+                            <p class="lead">
+                                Como fue señalado en la sección “Trabajo”, si trabajas de forma independiente (o en modalidad honorarios o cuenta propia)
+                                para ejercer el derecho a reposo o descanso de pre y post natal, requieres:
+                            </p>
+                            <p class="lead">
+                                »» Registrar 12 o más meses de afiliación a una AFP, con anterioridad al embarazo, como trabajadora independiente.
+                            </p>
+                            <p class="lead">
+                                »» Contar con seis o más cotizaciones previsionales, continuas o discontinuas, dentro de los doce meses anteriores al prenatal.
+
+                            </p>
+                            <p class="lead">
+                                »» Realizar cotizaciones de salud en FONASA o ISAPRE.
+
+                            </p>
+                            <p class="lead">
+                                »» Tener una licencia médica certificada por un/a médico/a autorizado/a en el período de Pre y Post Natal.
+
+                            </p>
+                            <p class="lead">
+                                Prenatal: es el descanso de seis semanas antes de la fecha estimada del parto. Además, es el subsidio que remplaza la remuneración
+                                imponible de la trabajadora a partir de 42 días antes de la fecha del parto.
+                            </p>
+                            <p class="lead">
+                                Postnatal: con la nueva ley de posnatal (Ley N° 20.545), el actual período de 12 semanas se extiende en 12 semanas adicionales
+                                (mediante el Permiso Posnatal Parental) hasta alcanzar las 24 semanas completas. El posnatal
+                                se entrega a las madres trabajadoras con un subsidio equivalente a una remuneración mensual
+                                con un tope de 66 UF brutos.
+                            </p>
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">• ¿Quién pagará mis cotizaciones mientras utilizo el derecho al posnatal?
+                                    </h3>
+                                </div>
+                            </div>
+                            <p class="lead">
+                                Las cotizaciones durante el permiso maternal, sea pre o postnatal, son pagadas integrantemente por el Estado.
+
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="Derechos" role="tabpanel" aria-labelledby="Derechos-tab">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">DERECHOS LABORALES
+                                    </h3>
+                                </div>
+                            </div>
+                            <p class="lead">
+                                Los/as trabajadores/as extranjeros/as y los/as nacionales cuentan con los mismos derechos en el campo laboral.
+
+                            </p>
+                            <p class="lead">
+                                Conoce tus derechos y ejércelos.
+
+                            </p>
+                            <div>
+                                <div style='text-align:center;'>
+                                    <img src="{% static 'images/mapa.jpeg' %}" />
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="Casa" role="tabpanel" aria-labelledby="Casa-tab">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br>
+                            <br>
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">TRABAJADORAS/ES DE CASA PARTICULAR
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <div style='text-align:center;'>
+                                    <img src="{% static 'images/casa.jpg' %}" />
+                                </div>
+
+                            </div>
+                            <p class="lead">
+                                Según lo estipulado en el Articulo 146 del Código del Trabajo, es trabajador/a de casa particular aquella persona dedicada
+                                de forma continua (jornada completa o parcial) a prestar servicios de aseo y asistencia en
+                                un hogar, en beneficio de una o más personas. Ejemplo: asesoras del hogar, cocineras, jardineros,
+                                niñeras, mozos, choferes.
+
+                            </p>
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">¿ES OBLIGATORIO TENER CONTRATO DE TRABAJO?
+                                    </h3>
+                                </div>
+
+                            </div>
+                            <p class="lead">
+                                Sí. Como fue señalado, el contrato de trabajo es un acuerdo entre el/la trabajador/a y el/la empleador/a para la realización
+                                de servicios a cambio de una remuneración. Es obligatorio formalizar (hacer por escrito)
+                                el contrato de trabajo, ya sea si cumples jornada completa o parcial, porque sirve como respaldo
+                                y da certezas sobre los términos de la relación laboral para el cumplimiento por ambas partes.
+
+                            </p>
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">¿QUÉ ES EL PERIODO DE PRUEBA?
+                                    </h3>
+                                </div>
+
+                            </div>
+                            <p class="lead">
+                                Es un plazo legal de 15 días que se usa para evaluar la relación laboral, pudiendo dar paso a su término o continuación
+
+                            </p>
+                            <p class="lead">
+                                »» Si continúa la relación laboral, el/la empleador/a debe formalizar (por escrito) el contrato de trabajo.
+                            </p>
+                            <p class="lead">
+                                »» Si termina la relación laboral, el/la empleador/a debe notificar con 3 días de anticipación y paga los días trabajados.
+
+                            </p>
+                            <p class="lead">
+                                Para más información visitar: www.chileatiende.gob.cl/fichas/ver/36065
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
     <!-- SECTION -->
     <div class="section">
