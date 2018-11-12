@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         -->
     <!-- crossorigin="anonymous"> -->
@@ -110,10 +110,10 @@
                 <div class="container">
                     <!-- nav -->
                     <ul class="nav-menu">
-                        <li class="has-dropdown">
+                        <li >
                             <a href="index.html">Inicio</a>
                         </li>
-                        <li class="has-dropdown">
+                        <li >
                             <a href="#about">Presentación</a>
 
                         </li>
@@ -444,7 +444,7 @@
                             <input name="contacto" type="text" id="contacto" placeholder="Telefono" value="" class="full-width">
                         </div>
                         <div class="form-field">
-                            <textarea name="description" id="descripcion" placeholder="Tu aviso" rows="10" cols="50" required="" aria-required="true"
+                            <textarea name="descripcion" id="descripcion" placeholder="Tu aviso" rows="10" cols="50" required="" aria-required="true"
                                 class="full-width"></textarea>
                         </div>
                         <div class="form-field">
@@ -616,7 +616,7 @@
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
     <script src="{% static 'js/pace.min.js' %}"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
     
 
     <!-- Java Script

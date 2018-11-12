@@ -12,7 +12,7 @@ from django.contrib.auth.decorators import login_required
 
 def index(request):
     usuario = request.session.get('usuario',None)
-    return render(request, 'index.html', {'personas':Persona.objects.all(),'usuario':usuario},{'aviso':Aviso.objects.all(),'usuario':usuario})
+    return render(request, 'index.html', {'personas':Persona.objects.all(),'usuario':usuario,'aviso':Aviso.objects.all(),'usuario':usuario})
 
 def registro(request):
     return render(request,'formulario.html', {})
@@ -76,10 +76,10 @@ def crear_aviso(request):
     emailcontacto = request.POST.get('emailcontacto','')
     contacto = request.POST.get('contacto','')
     descripcion = request.POST.get('descripcion','')
-    aviso=Aviso(titulo=titulo,emailContacto=emailcontacto,contacto=contacto,descripcion=descripcion)
+    aviso=Aviso(titulo=titulo,emailcontacto=emailcontacto,contacto=contacto,descripcion=descripcion)
     print(str(aviso))
     aviso.save()
-    return redirect('aviso')
+    return redirect('avisos')
 
 
 

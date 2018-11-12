@@ -70,10 +70,10 @@
                 <div class="container">
                     <!-- nav -->
                     <ul class="nav-menu">
-                        <li class="has-dropdown">
+                        <li>
                             <a href="{% url 'index' %}">Inicio</a>
                         </li>
-                        <li class="has-dropdown">
+                        <li>
                             <a href="#about">Presentación</a>
 
                         </li>
@@ -749,22 +749,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-
-        </div>
-        <!-- fin avisos -->
-
-        <div class="row clients-outer" data-aos="fade-up">
-            <div class="col-full">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="row">
+                            {% for a in aviso %}
                             <div class="col-sm-6">
-                                {% for a in aviso %}
+
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">{{a.titulo}}</h5>
@@ -773,17 +761,26 @@
                                         <p class="card-text">{{a.descripcion}}</p>
                                     </div>
                                 </div>
-                                {% endfor %}
+
                             </div>
+                            {% endfor %}
 
                         </div>
 
                     </div>
                 </div>
 
+
             </div>
+        </div>
+        </div>
 
         </div>
+
+        </div>
+        <!-- fin avisos -->
+
+
         <!-- fin avisos -->
 
     </section>
