@@ -18,7 +18,7 @@
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS
+   <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/argon.css' %}">
@@ -26,8 +26,12 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% load static %}
+    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        -->
+    <!-- crossorigin="anonymous"> -->
+    
     <!-- script
     ================================================== -->
     <script src="{% static 'js/modernizr.js' %}"></script>
@@ -50,30 +54,6 @@
             <!-- Top Nav -->
             <div id="nav-top">
                 <div class="container">
-                    <!-- social -->
-                    <ul class="nav-social">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /social -->
 
                     <!-- logo -->
                     <div class="nav-logo">
@@ -83,24 +63,6 @@
                     </div>
                     <!-- /logo -->
 
-                    <!-- search & aside toggle -->
-                    <div class="nav-btns">
-                        <button class="aside-btn">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button class="search-btn">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        <div id="nav-search">
-                            <form>
-                                <input class="input" name="search" placeholder="Enter your search...">
-                            </form>
-                            <button class="nav-close search-close">
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /search & aside toggle -->
                 </div>
             </div>
             <!-- /Top Nav -->
@@ -129,13 +91,13 @@
                                                     <a href="{% url 'trabajo' %}">Trabajo</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Vivienda</a>
+                                                    <a href="{% url 'vivienda' %}">Vivienda</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Educación</a>
+                                                    <a href="{% url 'educacion' %}">Educación</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Salud</a>
+                                                    <a href="{% url 'salud' %}">Salud</a>
                                                 </li>
                                                 <li>
                                                     <a href="{% url 'transporte' %}">Transporte</a>
@@ -146,25 +108,25 @@
                                             <h4 class="dropdown-heading">Trabajo</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Trabajador/a</a>
+                                                    <a href="{% url 'trabajo' %}">Trabajador/a</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Emprender</a>
+                                                    <a href="{% url 'trabajo' %}">Emprender</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Empleado/a Domestica</a>
+                                                    <a href="{% url 'trabajo' %}">Empleado/a Domestica</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Embarazo</a>
+                                                    <a href="{% url 'trabajo' %}">Embarazo</a>
                                                 </li>
                                             </ul>
                                             <h4 class="dropdown-heading">Vivienda</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Subsidio habitacional</a>
+                                                    <a href="{% url 'vivienda' %}">Subsidio habitacional</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Alquileres</a>
+                                                    <a href="{% url 'vivienda' %}">Alquileres</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -172,22 +134,22 @@
                                             <h4 class="dropdown-heading">Educación</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Básica y media</a>
+                                                    <a href="{% url 'educacion' %}">Básica y media</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Universitaria</a>
+                                                    <a href="{% url 'educacion' %}">Universitaria</a>
                                                 </li>
                                             </ul>
                                             <h4 class="dropdown-heading">Salud</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Derechos</a>
+                                                    <a href="{% url 'salud' %}">Derechos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pública</a>
+                                                    <a href="{% url 'salud' %}">Pública</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Privada</a>
+                                                    <a href="{% url 'salud' %}">Privada</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -195,13 +157,13 @@
                                             <h4 class="dropdown-heading">Transporte</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Transantiago</a>
+                                                    <a href="{% url 'transporte' %}">Transantiago</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Metro</a>
+                                                    <a href="{% url 'transporte' %}">Metro</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Ciclovias</a>
+                                                    <a href="{% url 'transporte' %}">Ciclovias</a>
                                                 </li>
 
                                             </ul>
@@ -211,21 +173,19 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">Conocer</a>
+                            <a href="{% url 'conocer' %}">Conocer</a>
                         </li>
                         <li>
-                            <a href="#">Documentación</a>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
                         </li>
-                        <li>
-                            <a href="#">Ayudar</a>
-                        </li>
+                        
                     </ul>
                     <!-- /nav -->
                 </div>
             </div>
             <!-- /Main Nav -->
 
-            
+
         </div>
 
         <nav class="header-nav">
@@ -239,58 +199,35 @@
 
                 <ul class="header-nav__list">
                     <li class="current">
-                        <a class="smoothscroll" href="{% url 'index' %}" title="home">Home</a>
+                        <a class="smoothscroll" href="#home" title="home">Inicio</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Presentación</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Noticias</a>
+                        <a class="dropdown-item" href="#about">Presentación</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="{% url 'trabajo' %}">Trabajo</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Vivienda</a>
+                        <a class="dropdown-item" href="{% url 'vivienda' %}">Vivienda</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Educación</a>
+                        <a class="dropdown-item" href="{% url 'educacion' %}">Educación</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Salud</a>
+                        <a class="dropdown-item" href="{% url 'salud' %}">Salud</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="{% url 'transporte' %}">Transporte</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Conocer</a>
+                        <a class="dropdown-item" href="{% url 'conocer' %}">Conocer</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Documentación</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Ayudar</a>
-                    </li>
-                </ul>
-
-                <ul class="header-nav__social">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram"></i>
-                        </a>
+                        <a class="dropdown-item" href="{% url 'documentacion' %}">Documentación</a>
                     </li>
 
                 </ul>
+
 
             </div>
             <!-- end header-nav__content -->
@@ -306,10 +243,10 @@
     </header>
     <!-- end s-header -->
 
-     <!-- home
+    <!-- home
     ================================================== -->
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/trabajadores.jpg' %}" data-natural-width=3000
-        data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/trabajadores.jpg' %}"
+        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -320,8 +257,7 @@
 
                 <h1>
                     Trabajo
-                    <br> 
-                    Informate sobre esto!
+                    <br> Informate sobre esto!
 
                 </h1>
 
@@ -384,7 +320,7 @@
                                 <a href="category.html">Estudio</a>
                             </div>
                             <h3 class="post-title title-lg">
-                                    <a href="#" data-toggle="modal" data-target="#miventana1">La mitad de las pymes chilenas dice tener trabajadores extranjeros</a>
+                                <a href="#" data-toggle="modal" data-target="#miventana1">La mitad de las pymes chilenas dice tener trabajadores extranjeros</a>
                             </h3>
                         </div>
                     </div>
@@ -400,7 +336,7 @@
                             <div class="post-category">
                             </div>
                             <h3 class="post-title">
-                                    <a href="#" data-toggle="modal" data-target="#miventana2">Mesa sindical propone visa temporal para extranjeros</a>
+                                <a href="#" data-toggle="modal" data-target="#miventana2">Mesa sindical propone visa temporal para extranjeros</a>
                             </h3>
                         </div>
                     </div>
@@ -415,8 +351,9 @@
                             <div class="post-category">
                             </div>
                             <h3 class="post-title">
-                                <a href="#" data-toggle="modal" data-target="#miventana3">Al 86% de los haitianos les cuesta más encontrar trabajo que a otros extranjeros en Chile según estudio
-                                    </a>
+                                <a href="#" data-toggle="modal" data-target="#miventana3">Al 86% de los haitianos les cuesta más encontrar trabajo que a otros extranjeros en Chile
+                                    según estudio
+                                </a>
                             </h3>
                         </div>
                     </div>
@@ -454,8 +391,8 @@
                                         <a href="category.html"></a>
                                     </div>
                                     <h3 class="post-title">
-                                            <a href="#" data-toggle="modal" data-target="#miventana4">Operadores Picking Quilicura El cortijo
-                                            </a>
+                                        <a href="#" data-toggle="modal" data-target="#miventana4">Operadores Picking Quilicura El cortijo
+                                        </a>
                                     </h3>
                                 </div>
                             </div>
@@ -471,10 +408,10 @@
                                 <div class="post-body">
                                     <div class="post-category">
                                         <a href="category.html"></a>
-                                        
+
                                     </div>
                                     <h3 class="post-title">
-                                            <a href="#" data-toggle="modal" data-target="#miventana5">Auxiliar de aseo / Quilicura</a>
+                                        <a href="#" data-toggle="modal" data-target="#miventana5">Auxiliar de aseo / Quilicura</a>
                                     </h3>
                                 </div>
                             </div>
@@ -494,7 +431,7 @@
                                         <a href="category.html"></a>
                                     </div>
                                     <h3 class="post-title">
-                                            <a href="#" data-toggle="modal" data-target="#miventana6">Operario turno PM para tienda ubicada en AIEP de Bellavista! de lunes a sábado!</a>
+                                        <a href="#" data-toggle="modal" data-target="#miventana6">Operario turno PM para tienda ubicada en AIEP de Bellavista! de lunes a sábado!</a>
                                     </h3>
                                 </div>
                             </div>
@@ -503,7 +440,7 @@
                     </div>
                     <!-- /row -->
 
-                    
+
 
                     <!-- social widget -->
                     <div class="aside-widget">
@@ -612,8 +549,8 @@
                 </div>
 
                 <div class="go-top">
-                    <a class="smoothscroll" title="Subir" href="#top" >
-                            <img src="{% static 'images/up.png' %}" alt="">
+                    <a class="smoothscroll" title="Subir" href="#top">
+                        <img src="{% static 'images/up.png' %}" alt="">
                         <i class="icon-arrow-up" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -627,252 +564,218 @@
 
 
 
-<!--MODALS-->
+    <!--MODALS-->
 
-<!--modal miventana1-->
-<div class="container" style="margin-top: 60px;">
+    <!--modal miventana1-->
+    <div class="container" style="margin-top: 60px;">
         <div class="modal fade" id="miventana1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                            <h4>La mitad de las pymes chilenas dice tener trabajadores extranjeros</h4>
+                        <h4>La mitad de las pymes chilenas dice tener trabajadores extranjeros</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        
+
                     </div>
                     <div class="modal-body">
                         <h3>
-                                Al parecer, las medidas anunciadas por el Presidente Sebastián Piñera a principios de abril para normalizar el sistema
-                                de ingreso al país de los inmigrantes, ya tiene algunos efectos en las pequeñas y medianas empresas.
-                                <br>
-                                <br>
-                                Según la última entrega del “Índice de percepciones y expectativas económicas de las pymes”, del Barómetro Pyme que
-                                realiza mensualmente la compañía de soluciones financieras para empresas y pymes, AVLA, un 49,7% de los encuestados
-                                afirma que su empresa cuenta con trabajadores extranjeros (ver gráfico) y en un 58% de ellas, este grupo representa más
-                                del 5% del capital humano.
-                                <br>
-                                <br>
-                                Esto demuestra que cada vez es más recurrente la contratación de ciudadanos de otros países en este segmento económico,
-                                lo que podría aumentar durante los próximos meses o años, tomando en cuenta que entre las medidas anunciadas por el
-                                Mandatario, está la Ley de Migración, que busca modernizar la normativa al respecto, cuyos principales aspectos son
-                                regular y ordenar los flujos migratorios, ampliar los tipos de visas, y mejorar y agilizar los procesos de expulsión.
+                            Al parecer, las medidas anunciadas por el Presidente Sebastián Piñera a principios de abril para normalizar el sistema de
+                            ingreso al país de los inmigrantes, ya tiene algunos efectos en las pequeñas y medianas empresas.
+                            <br>
+                            <br> Según la última entrega del “Índice de percepciones y expectativas económicas de las pymes”,
+                            del Barómetro Pyme que realiza mensualmente la compañía de soluciones financieras para empresas
+                            y pymes, AVLA, un 49,7% de los encuestados afirma que su empresa cuenta con trabajadores extranjeros
+                            (ver gráfico) y en un 58% de ellas, este grupo representa más del 5% del capital humano.
+                            <br>
+                            <br> Esto demuestra que cada vez es más recurrente la contratación de ciudadanos de otros países
+                            en este segmento económico, lo que podría aumentar durante los próximos meses o años, tomando
+                            en cuenta que entre las medidas anunciadas por el Mandatario, está la Ley de Migración, que busca
+                            modernizar la normativa al respecto, cuyos principales aspectos son regular y ordenar los flujos
+                            migratorios, ampliar los tipos de visas, y mejorar y agilizar los procesos de expulsión.
                         </h3>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class= "btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
 
 
-        <!--modal miventana2-->
-<div class="container" style="margin-top: 60px;">
+    <!--modal miventana2-->
+    <div class="container" style="margin-top: 60px;">
         <div class="modal fade" id="miventana2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                            <h4>Mesa sindical propone visa temporal para extranjeros</h4>
+                        <h4>Mesa sindical propone visa temporal para extranjeros</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        
+
                     </div>
                     <div class="modal-body">
                         <h3>
-                                Las tres centrales sindicales del país (CUT, CAT y UNT), entregaron al Ministerio del Trabajo y Previsión Social, diez
-                                propuestas con el objetivo de mejorar las condiciones de vida de los trabajadores extranjeros en el país. Entre los
-                                planteamientos de la mesa, se incluye poner fin a la visa de trabajo sujeta a contrato y su reemplazo por una visa
-                                temporaria que facilite a los migrantes encontrar un nuevo empleo cuando están cesantes.
-                                <br>
-                                <br>
-                                Asimismo, también sugirieron permitir la portabilidad de los fondos de pensiones para facilitar la jubilación de los
-                                extranjeros en su país natal, si así lo desean, junto con asegurar el derecho legal del envío al exterior de remesas de
-                                dinero a sus familias. En tanto, se propone ampliar los escasos convenios de convalidación de estudios a todas las
-                                nacionalidades migrantes, facilitando así las posibilidades laborales.
-                                <br>
-                                <br>
-                                Mientras, en lo sindical, se pide el derecho de los migrantes a afiliarse a sindicatos nacionales, sin que tengan que
-                                formar sus propias agrupaciones.
+                            Las tres centrales sindicales del país (CUT, CAT y UNT), entregaron al Ministerio del Trabajo y Previsión Social, diez propuestas
+                            con el objetivo de mejorar las condiciones de vida de los trabajadores extranjeros en el país.
+                            Entre los planteamientos de la mesa, se incluye poner fin a la visa de trabajo sujeta a contrato
+                            y su reemplazo por una visa temporaria que facilite a los migrantes encontrar un nuevo empleo
+                            cuando están cesantes.
+                            <br>
+                            <br> Asimismo, también sugirieron permitir la portabilidad de los fondos de pensiones para facilitar
+                            la jubilación de los extranjeros en su país natal, si así lo desean, junto con asegurar el derecho
+                            legal del envío al exterior de remesas de dinero a sus familias. En tanto, se propone ampliar
+                            los escasos convenios de convalidación de estudios a todas las nacionalidades migrantes, facilitando
+                            así las posibilidades laborales.
+                            <br>
+                            <br> Mientras, en lo sindical, se pide el derecho de los migrantes a afiliarse a sindicatos nacionales,
+                            sin que tengan que formar sus propias agrupaciones.
                         </h3>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class= "btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
 
-        <!--modal miventana3-->
-<div class="container" style="margin-top: 60px;">
+    <!--modal miventana3-->
+    <div class="container" style="margin-top: 60px;">
         <div class="modal fade" id="miventana3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                            <h2>El idioma es el principal obstáculo, según el sondeo de la U. de Talca. Además, un 48% declaró haber sido discriminado alguna vez.</h2>
+                        <h2>El idioma es el principal obstáculo, según el sondeo de la U. de Talca. Además, un 48% declaró haber
+                            sido discriminado alguna vez.</h2>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        
+
                     </div>
                     <div class="modal-body">
-                        <h4>                            
-                        La dificultad para encontrar trabajo o hallar uno que permita tener condiciones mínimas de vida digna, son parte de los
-                        principales argumentos esgrimidos por los ciudadanos haitianos que manifiestan su voluntad de abandonar Chile y
-                        regresar a su país, tras venir en busca de oportunidades.
-                        <br>
-                        <br>
-                        Lo anterior es respaldado por los resultados del estudio "Haitianos en Chile: integración laboral, social y cultural",
-                        elaborado por el Centro Nacional de Estudios Migratorios (Cenem) de la Universidad de Talca, que reveló que al 86% de
-                        los isleños presentes en el país les cuesta más encontrar trabajo que a migrantes de otras nacionalidades.
-                        <br>
-                        <br>
-                        El director de la mentada entidad, Medardo Aguirre, afirmó que la principal causa de lo anterior es la barrera
-                        idiomática, la cual, fue señalada por el 60,1% de los encuestados.
+                        <h4>
+                            La dificultad para encontrar trabajo o hallar uno que permita tener condiciones mínimas de vida digna, son parte de los principales
+                            argumentos esgrimidos por los ciudadanos haitianos que manifiestan su voluntad de abandonar Chile
+                            y regresar a su país, tras venir en busca de oportunidades.
+                            <br>
+                            <br> Lo anterior es respaldado por los resultados del estudio "Haitianos en Chile: integración laboral,
+                            social y cultural", elaborado por el Centro Nacional de Estudios Migratorios (Cenem) de la Universidad
+                            de Talca, que reveló que al 86% de los isleños presentes en el país les cuesta más encontrar
+                            trabajo que a migrantes de otras nacionalidades.
+                            <br>
+                            <br> El director de la mentada entidad, Medardo Aguirre, afirmó que la principal causa de lo anterior
+                            es la barrera idiomática, la cual, fue señalada por el 60,1% de los encuestados.
                         </h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class= "btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
 
 
-        <!--modal miventana4-->
-<div class="container" style="margin-top: 60px;">
+    <!--modal miventana4-->
+    <div class="container" style="margin-top: 60px;">
         <div class="modal fade" id="miventana4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                            <h2>Operadores Picking Quilicura El cortijo</h2>
+                        <h2>Operadores Picking Quilicura El cortijo</h2>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        
+
                     </div>
                     <div class="modal-body">
                         <h4>
-                            Lugar de Trabajo:
-                            Quilicura, Región Metropolitana
+                            Lugar de Trabajo: Quilicura, Región Metropolitana
+                            <br> Salario No especificado
+                            <br> Tipo de puesto: Full-time
+                            <br> Área: Otros
                             <br>
-                            Salario
-                            No especificado
-                            <br>
-                            Tipo de puesto:
-                            Full-time
-                            <br>
-                            Área:
-                            Otros
-                            <br><br>
-                            Requisitos:
-                            <br>
-                            -Mayores de 18 años
-                            <br>
-                            -Extranjeros con permiso de trabajo vigente.
-                            <br>
-                            -Experiencia como auxiliar de Bodega
-                            <br>
-                            -Experiencia en radiofrecuencia ( no excluyente)
+                            <br> Requisitos:
+                            <br> -Mayores de 18 años
+                            <br> -Extranjeros con permiso de trabajo vigente.
+                            <br> -Experiencia como auxiliar de Bodega
+                            <br> -Experiencia en radiofrecuencia ( no excluyente)
                         </h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class= "btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
 
     <!--modal miventana5-->
-<div class="container" style="margin-top: 60px;">
+    <div class="container" style="margin-top: 60px;">
         <div class="modal fade" id="miventana5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                            <h2>Auxiliar de aseo / Quilicura TAWA CHILE SA</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                        
+                        <h2>Auxiliar de aseo / Quilicura TAWA CHILE SA</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
                         <h4>
-                                Lugar de Trabajo:
-                                Quilicura, Región Metropolitana
-                                <br>
-                                Salario
-                                No especificado
-                                <br>
-                                Tipo de puesto:
-                                Full-time
-                                <br>
-                                Área:
-                                Otros
-                                <br><br>
-                                Importante empresa dedicada al rubro de los chocolates, requiere contratar auxiliar de aseo para trabajar en sus
-                                dependencias, ubicadas en Quilicura.
-                                <br>
-                                Funcion:                                
-                                Mantencion de orden y aseo de la bodega y oficinas.
-                                <br>
-                                Requisitos:
-                                Experiencia en el cargo.
-                                <br>
-                                Jornada Laboral: lunes a viernes 7:30 a 17:30 hrs.
-                                <br>
-                                Renta: $350.000
+                            Lugar de Trabajo: Quilicura, Región Metropolitana
+                            <br> Salario No especificado
+                            <br> Tipo de puesto: Full-time
+                            <br> Área: Otros
+                            <br>
+                            <br> Importante empresa dedicada al rubro de los chocolates, requiere contratar auxiliar de aseo
+                            para trabajar en sus dependencias, ubicadas en Quilicura.
+                            <br> Funcion: Mantencion de orden y aseo de la bodega y oficinas.
+                            <br> Requisitos: Experiencia en el cargo.
+                            <br> Jornada Laboral: lunes a viernes 7:30 a 17:30 hrs.
+                            <br> Renta: $350.000
                         </h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class= "btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
 
 
-            <!--modal miventana6-->
-<div class="container" style="margin-top: 60px;">
+    <!--modal miventana6-->
+    <div class="container" style="margin-top: 60px;">
         <div class="modal fade" id="miventana6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-header="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                            <h2>Operario turno PM para tienda ubicada en AIEP de Bellavista! de lunes a sábado!</h2>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>                        
+                        <h2>Operario turno PM para tienda ubicada en AIEP de Bellavista! de lunes a sábado!</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
                         <h4>
-                                Lugar de Trabajo:
-                                Quilicura, Región Metropolitana
-                                <br>
-                                Salario
-                                No especificado
-                                <br>
-                                Tipo de puesto:
-                                Full-time
-                                <br>
-                                Área:
-                                Otros
-                                <br><br>
-                                Importante empresa dedicada al rubro de retail y mini market con sucursales a lo largo de todo el país, requiere a los
-                                mejores Operarios para integrarse a nuestro equipo de trabajo, buscamos personas comprometidas, con actitud de servicio
-                                para nuestra tienda ubicada en AIEP de Patio Bellavista.
-                                <br>
-                                Ofrecemos una Renta Líquida de $311.000
-                                <br>
-                                Jornada Laboral de Lunes a viernes de 13:00 a 22:00 y sábados 14:00 a 20:00 hrs.
-                                <br>
-                                Con una hora de colación.
+                            Lugar de Trabajo: Quilicura, Región Metropolitana
+                            <br> Salario No especificado
+                            <br> Tipo de puesto: Full-time
+                            <br> Área: Otros
+                            <br>
+                            <br> Importante empresa dedicada al rubro de retail y mini market con sucursales a lo largo de todo
+                            el país, requiere a los mejores Operarios para integrarse a nuestro equipo de trabajo, buscamos
+                            personas comprometidas, con actitud de servicio para nuestra tienda ubicada en AIEP de Patio
+                            Bellavista.
+                            <br> Ofrecemos una Renta Líquida de $311.000
+                            <br> Jornada Laboral de Lunes a viernes de 13:00 a 22:00 y sábados 14:00 a 20:00 hrs.
+                            <br> Con una hora de colación.
                         </h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class= "btn btn-primary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-    
+    </div>
+
 
 
 

@@ -39,6 +39,7 @@
     <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
 
 </head>
+{% load staticfiles %}
 
 <body id="top">
 
@@ -50,30 +51,6 @@
             <!-- Top Nav -->
             <div id="nav-top">
                 <div class="container">
-                    <!-- social -->
-                    <ul class="nav-social">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /social -->
 
                     <!-- logo -->
                     <div class="nav-logo">
@@ -83,24 +60,6 @@
                     </div>
                     <!-- /logo -->
 
-                    <!-- search & aside toggle -->
-                    <div class="nav-btns">
-                        <button class="aside-btn">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button class="search-btn">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        <div id="nav-search">
-                            <form>
-                                <input class="input" name="search" placeholder="Enter your search...">
-                            </form>
-                            <button class="nav-close search-close">
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /search & aside toggle -->
                 </div>
             </div>
             <!-- /Top Nav -->
@@ -111,7 +70,7 @@
                     <!-- nav -->
                     <ul class="nav-menu">
                         <li class="has-dropdown">
-                            <a href="index.html">Inicio</a>
+                            <a href="{% url 'index' %}">Inicio</a>
                         </li>
                         <li class="has-dropdown">
                             <a href="#about">Presentación</a>
@@ -126,19 +85,19 @@
                                             <h4 class="dropdown-heading">Categorias</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="trabajo.html">Trabajo</a>
+                                                    <a href="{% url 'trabajo' %}">Trabajo</a>
                                                 </li>
                                                 <li>
-                                                    <a href="vivienda.html">Vivienda</a>
+                                                    <a href="{% url 'vivienda' %}">Vivienda</a>
                                                 </li>
                                                 <li>
-                                                    <a href="educacion.html">Educación</a>
+                                                    <a href="{% url 'educacion' %}">Educación</a>
                                                 </li>
                                                 <li>
-                                                    <a href="salud.html">Salud</a>
+                                                    <a href="{% url 'salud' %}">Salud</a>
                                                 </li>
                                                 <li>
-                                                    <a href="transporte.html">Transporte</a>
+                                                    <a href="{% url 'transporte' %}">Transporte</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -146,25 +105,25 @@
                                             <h4 class="dropdown-heading">Trabajo</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Trabajador/a</a>
+                                                    <a href="{% url 'trabajo' %}">Trabajador/a</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Emprender</a>
+                                                    <a href="{% url 'trabajo' %}">Emprender</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Empleado/a Domestica</a>
+                                                    <a href="{% url 'trabajo' %}">Empleado/a Domestica</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Embarazo</a>
+                                                    <a href="{% url 'trabajo' %}">Embarazo</a>
                                                 </li>
                                             </ul>
                                             <h4 class="dropdown-heading">Vivienda</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Subsidio habitacional</a>
+                                                    <a href="{% url 'vivienda' %}">Subsidio habitacional</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Alquileres</a>
+                                                    <a href="{% url 'vivienda' %}">Alquileres</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -172,22 +131,22 @@
                                             <h4 class="dropdown-heading">Educación</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Básica y media</a>
+                                                    <a href="{% url 'educacion' %}">Básica y media</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Universitaria</a>
+                                                    <a href="{% url 'educacion' %}">Universitaria</a>
                                                 </li>
                                             </ul>
                                             <h4 class="dropdown-heading">Salud</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Derechos</a>
+                                                    <a href="{% url 'salud' %}">Derechos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pública</a>
+                                                    <a href="{% url 'salud' %}">Pública</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Privada</a>
+                                                    <a href="{% url 'salud' %}">Privada</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -195,13 +154,13 @@
                                             <h4 class="dropdown-heading">Transporte</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Transantiago</a>
+                                                    <a href="{% url 'transporte' %}">Transantiago</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Metro</a>
+                                                    <a href="{% url 'transporte' %}">Metro</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Ciclovias</a>
+                                                    <a href="{% url 'transporte' %}">Ciclovias</a>
                                                 </li>
 
                                             </ul>
@@ -211,126 +170,28 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">Conocer</a>
+                            <a href="{% url 'conocer' %}">Conocer</a>
                         </li>
                         <li>
-                            <a href="#">Documentación</a>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="has-dropdown" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
                         </li>
 
                     </ul>
-                    <!-- /nav -->
+
+
                 </div>
-            </div>
-            <!-- /Main Nav -->
+                <!-- end header-nav__content -->
 
-            <!-- Aside Nav -->
-            <div id="nav-aside">
-                <ul class="nav-aside-menu">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="has-dropdown">
-                        <a>Chile</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Lifestyle</a>
-                            </li>
-                            <li>
-                                <a href="#">Fashion</a>
-                            </li>
-                            <li>
-                                <a href="#">Technology</a>
-                            </li>
-                            <li>
-                                <a href="#">Travel</a>
-                            </li>
-                            <li>
-                                <a href="#">Health</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="about.html">About Us</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contacts</a>
-                    </li>
-                    <li>
-                        <a href="#">Advertise</a>
-                    </li>
-                </ul>
-                <button class="nav-close nav-aside-close">
-                    <span></span>
-                </button>
-            </div>
-            <!-- /Aside Nav -->
-        </div>
+                </nav>
+                <!-- end header-nav -->
 
-        <nav class="header-nav">
-
-            <a href="#0" class="header-nav__close" title="close">
-                <span>Close</span>
-            </a>
-
-            <div class="header-nav__content">
-                <h3>Navigation</h3>
-
-                <ul class="header-nav__list">
-                    <li class="current">
-                        <a class="smoothscroll" href="{% url 'index' %}" title="home">Inicio</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'trabajo' %}">Trabajo</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'vivienda' %}">Vivienda</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'educacion' %}">Educación</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'salud' %}">Salud</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'transporte' %}">Transporte</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'conocer' %}">Conocer</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="{% url 'documentacion' %}">Documentación</a>
-                    </li>
-                </ul>
-
-                <ul class="header-nav__social">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-            <!-- end header-nav__content -->
-
-        </nav>
-        <!-- end header-nav -->
-
-        <a class="header-menu-toggle" href="#0">
-            <span class="header-menu-text"></span>
-            <span class="header-menu-icon"></span>
-        </a>
+                <a class="header-menu-toggle" href="#0">
+                    <span class="header-menu-text"></span>
+                    <span class="header-menu-icon"></span>
+                </a>
 
     </header>
     <!-- end s-header -->
@@ -396,282 +257,362 @@
     <br>
     <br>
     <div class="row">
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark"></h3>
-                <h1 class="display-1 display-1--light">Chile contado en 20 lugares imprescindibles</h1>
+        <div class="col-md-12">
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark"></h3>
+                    <h1 class="display-1 display-1--light">Chile contado en 20 lugares imprescindibles</h1>
+                </div>
+
             </div>
 
-        </div>
-        <!-- end section-header -->
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            De las cumbres a las estepas, del desierto a los glaciares, del entorno más urbanita al vacío total de edificios, la clave
+                            es la variedad. Como en el resumen de una película, aquí está concentrado el Chile más emocionante,
+                            contado en 20 lugares que debes conocer.
+                        </em>
 
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        De las cumbres a las estepas, del desierto a los glaciares, del entorno más urbanita al vacío total de edificios, la clave
-                        es la variedad. Como en el resumen de una película, aquí está concentrado el Chile más emocionante,
-                        contado en 20 lugares que debes conocer.
-                    </em>
-
-                </p>
-            </div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/valparaiso.jpg' %}" />
-        </div>
-        <br>
-        <br>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Valparaíso, el principal puerto de Chile</h3>
-            </div>
-        </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        El emblemático puerto chileno tiene una vida intensa que está a la vanguardia en gastronomía, diseño y encantadores hoteles
-                        boutique. Subir y bajar por los cerros es una verdadera experiencia al aire libre que puede sentirse
-                        en cada uno de sus recovecos. Valparaíso es el principal puerto de Chile y las formas de su arquitectura,
-                        construidas en las laderas, le valieron en 2003 la categoría de Patrimonio Cultural de la Humanidad
-                        concedida por la Unesco.
-                    </em>
-
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     <br>
     <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/santiago.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Santiago, ganando puestos en el ránking de calidad de vida de la región</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/valparaiso.jpg' %}" />
+            </div>
+            <br>
+            <br>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Valparaíso, el principal puerto de Chile</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            El emblemático puerto chileno tiene una vida intensa que está a la vanguardia en gastronomía, diseño y encantadores hoteles
+                            boutique. Subir y bajar por los cerros es una verdadera experiencia al aire libre que puede sentirse
+                            en cada uno de sus recovecos. Valparaíso es el principal puerto de Chile y las formas de su arquitectura,
+                            construidas en las laderas, le valieron en 2003 la categoría de Patrimonio Cultural de la Humanidad
+                            concedida por la Unesco.
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        Silenciosamente, la capital chilena ha ido ocupando los primeros lugares en los rankings de calidad de vida de la región.
-                        El carácter urbano que identifica a la metrópoli sureña le ha dado un inmejorable poder de marca
-                        en el que destaca por ser una ciudad limpia, ordenada y segura. Con la majestuosa cordillera de los
-                        Andes como telón de fondo, Santiago ha sabido modernizarse sin perder un cierto encanto provinciano,
-                        preservando una parte de su pasado colonial. Santiago tiene muchos barrios que se formaron por distintos
-                        modos de interacción social y el espacio público ha dado vida a algo que va más allá de un simple
-                        conjunto de viviendas, calles y árboles. Algunos de estos barrios ofrecen una calidad arquitectónica
-                        de gran valor y se han convertido en auténticos iconos de la ciudad.
-                    </em>
-
-                </p>
-            </div>
-        </div>
-
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/frutillar.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Frutillar, arte y cultura sobre el lago Llanquihue</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/santiago.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Santiago, ganando puestos en el ránking de calidad de vida de la región</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            Silenciosamente, la capital chilena ha ido ocupando los primeros lugares en los rankings de calidad de vida de la región.
+                            El carácter urbano que identifica a la metrópoli sureña le ha dado un inmejorable poder de marca
+                            en el que destaca por ser una ciudad limpia, ordenada y segura. Con la majestuosa cordillera
+                            de los Andes como telón de fondo, Santiago ha sabido modernizarse sin perder un cierto encanto
+                            provinciano, preservando una parte de su pasado colonial. Santiago tiene muchos barrios que se
+                            formaron por distintos modos de interacción social y el espacio público ha dado vida a algo que
+                            va más allá de un simple conjunto de viviendas, calles y árboles. Algunos de estos barrios ofrecen
+                            una calidad arquitectónica de gran valor y se han convertido en auténticos iconos de la ciudad.
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        La pequeña ciudad de Frutillar, ubicada al borde del lago Llanquihue, hacia el sur de Chile, fue declarada recientemente
-                        zona típica, principalmente por su herencia alemana. La denominación pretende conservar los valores
-                        patrimoniales y arquitectónicos derivados de la colonización alemana, así como las áreas naturales
-                        asociadas al lago y las laderas colindantes. En Frutillar, además, se ubica el Teatro del Lago, un
-                        centro artístico y cultural internacional de primer orden que recibe anualmente a más de 150.000
-                        personas para disfrutar de las 250 actividades que se desarrollan a lo largo de todo el año. Además,
-                        las visitas guiadas permiten conocer la arquitectura y los desafíos que presentó el proyecto en el
-                        momento de su construcción, como también la compleja tecnología de sus instalaciones.
-                    </em>
-
-                </p>
-            </div>
-        </div>
-
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/tierraFuego.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Tierra del Fuego, uno de los lugares desconocidos e intactos del planeta</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/frutillar.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Frutillar, arte y cultura sobre el lago Llanquihue</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            La pequeña ciudad de Frutillar, ubicada al borde del lago Llanquihue, hacia el sur de Chile, fue declarada recientemente
+                            zona típica, principalmente por su herencia alemana. La denominación pretende conservar los valores
+                            patrimoniales y arquitectónicos derivados de la colonización alemana, así como las áreas naturales
+                            asociadas al lago y las laderas colindantes. En Frutillar, además, se ubica el Teatro del Lago,
+                            un centro artístico y cultural internacional de primer orden que recibe anualmente a más de 150.000
+                            personas para disfrutar de las 250 actividades que se desarrollan a lo largo de todo el año.
+                            Además, las visitas guiadas permiten conocer la arquitectura y los desafíos que presentó el proyecto
+                            en el momento de su construcción, como también la compleja tecnología de sus instalaciones.
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        Tierra del Fuego, la mayor isla de Chile (29.484 km2), territorio de explotación petrolera y de las estancias de esquila
-                        de ovejas, permanece como uno de los lugares más desconocidos e intactos del planeta. Sus anchos
-                        caminos llenos de guijarros que van serpenteando por la pampa impresionan por sus horizontes interminables,
-                        que parecieran no tener destino alguno. Dentro de los recorridos patrimoniales de Tierra del Fuego
-                        destacan la ruta de las estancias, de la madera, de los glaciares, de Darwin (y su epopeya de la
-                        vuelta al mundo). La ruta Selknam y los territorios de caza y fuego. La ruta de los humedales, las
-                        aves y las aguas, todas propuestas que se desarrollan en un marco de naturaleza virgen, del que también
-                        forma parte el Parque Natural Karukinka, un modelo de conservación para la biodiversidad.
-                    </em>
-
-                </p>
-            </div>
-        </div>
-
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/cochamo.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Desde el pueblo de Cochamó la vista es espectacular, con el estuario del río Reloncaví y el volcán Yates
-                    al fondo</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/tierraFuego.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Tierra del Fuego, uno de los lugares desconocidos e intactos del planeta</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            Tierra del Fuego, la mayor isla de Chile (29.484 km2), territorio de explotación petrolera y de las estancias de esquila
+                            de ovejas, permanece como uno de los lugares más desconocidos e intactos del planeta. Sus anchos
+                            caminos llenos de guijarros que van serpenteando por la pampa impresionan por sus horizontes
+                            interminables, que parecieran no tener destino alguno. Dentro de los recorridos patrimoniales
+                            de Tierra del Fuego destacan la ruta de las estancias, de la madera, de los glaciares, de Darwin
+                            (y su epopeya de la vuelta al mundo). La ruta Selknam y los territorios de caza y fuego. La ruta
+                            de los humedales, las aves y las aguas, todas propuestas que se desarrollan en un marco de naturaleza
+                            virgen, del que también forma parte el Parque Natural Karukinka, un modelo de conservación para
+                            la biodiversidad.
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        El valle de Cochamó está considerado por los especialistas como uno de los mejores nuevos destinos de escalada en roca del
-                        planeta. Escenarios como El Arco, una formación rocosa que se complementa con un bosque de alerces
-                        milenarios y las interminables paredes de granito de La Junta maravillan a los amantes de la vida
-                        outdoor que exploran lugares prácticamente inalterados por el hombre. El destino de aventura se encuentra
-                        92 kilómetros al este de la ciudad de Puerto Montt y ofrece una gran diversidad de actividades que
-                        conectan con la naturaleza más auténtica en la Patagonia chilena. Cochamó tiene no solo una infinidad
-                        de rutas de escalada con todo tipo de dificultades, sino también ríos transparentes como el Puelo
-                        y el lago Tagua Tagua, con cotos de pesca que permiten atrapar salmones chinook y truchas arcoiris.
-                    </em>
-
-                </p>
-            </div>
-        </div>
-
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/tirana.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Fiesta de la Tirana, uno de los acontecimientos culturales más tradicionales de Chile</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/cochamo.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Desde el pueblo de Cochamó la vista es espectacular, con el estuario del río Reloncaví y el volcán Yates
+                        al fondo</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            El valle de Cochamó está considerado por los especialistas como uno de los mejores nuevos destinos de escalada en roca del
+                            planeta. Escenarios como El Arco, una formación rocosa que se complementa con un bosque de alerces
+                            milenarios y las interminables paredes de granito de La Junta maravillan a los amantes de la
+                            vida outdoor que exploran lugares prácticamente inalterados por el hombre. El destino de aventura
+                            se encuentra 92 kilómetros al este de la ciudad de Puerto Montt y ofrece una gran diversidad
+                            de actividades que conectan con la naturaleza más auténtica en la Patagonia chilena. Cochamó
+                            tiene no solo una infinidad de rutas de escalada con todo tipo de dificultades, sino también
+                            ríos transparentes como el Puelo y el lago Tagua Tagua, con cotos de pesca que permiten atrapar
+                            salmones chinook y truchas arcoiris.
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        En medio de la Pampa del Tamarugal, más de 1.500 kilómetros al norte de Santiago, se celebra la Fiesta de La Tirana, impresionante
-                        evento que transforma el pequeño pueblo del mismo nombre en un centro de peregrinación donde más
-                        de 150.000 personas, entre fieles y visitantes, le rinden culto a la Virgen del Carmen. La Fiesta
-                        de La Tirana, que se celebra en el mes de julio, es uno de los acontecimientos culturales más tradicionales
-                        de Chile. En ella se mezclan bailes, música y ofrendas que forman parte del sincretismo cultural
-                        de los pueblos del norte y su trascendencia ha llegado hasta las comunidades de fieles de Bolivia
-                        y Perú, atrayendo, además, viajeros desde Argentina, Europa y Estados Unidos.
-                    </em>
-
-                </p>
-            </div>
-        </div>
-
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/atacama.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">San Pedro de Atacama, un paréntesis de vida en medio de la aridez y el desierto</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/tirana.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Fiesta de la Tirana, uno de los acontecimientos culturales más tradicionales de Chile</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            En medio de la Pampa del Tamarugal, más de 1.500 kilómetros al norte de Santiago, se celebra la Fiesta de La Tirana, impresionante
+                            evento que transforma el pequeño pueblo del mismo nombre en un centro de peregrinación donde
+                            más de 150.000 personas, entre fieles y visitantes, le rinden culto a la Virgen del Carmen. La
+                            Fiesta de La Tirana, que se celebra en el mes de julio, es uno de los acontecimientos culturales
+                            más tradicionales de Chile. En ella se mezclan bailes, música y ofrendas que forman parte del
+                            sincretismo cultural de los pueblos del norte y su trascendencia ha llegado hasta las comunidades
+                            de fieles de Bolivia y Perú, atrayendo, además, viajeros desde Argentina, Europa y Estados Unidos.
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        A 311 kilómetros de la ciudad de Antofagasta se encuentra el oasis de San Pedro de Atacama, un paréntesis de vida en medio
-                        de la aridez y el desierto. En sus alrededores la naturaleza ofrece un sublime espectáculo de contrastes.
-                        El entorno da cuenta de una geografía extraordinaria, con suaves planicies que terminan en cordones
-                        montañosos y volcanes que se elevan por encima de los 6.000 metros, contraponiéndose a los extensos
-                        y blancos salares formados por aguas subterráneas que nunca llegan al mar. San Pedro de Atacama,
-                        antaño meta de mochileros, es uno de los destinos turísticos más apetecidos por el turista extranjero,
-                        ya que mezcla el remoto e inhóspito paisaje desértico, el interés geológico y arqueológico y una
-                        variada oferta hotelera
-                    </em>
-
-                </p>
-            </div>
-        </div>
-
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/chiloe.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Chiloé, campos, mar y bosques sobre islotes</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/atacama.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">San Pedro de Atacama, un paréntesis de vida en medio de la aridez y el desierto</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            A 311 kilómetros de la ciudad de Antofagasta se encuentra el oasis de San Pedro de Atacama, un paréntesis de vida en medio
+                            de la aridez y el desierto. En sus alrededores la naturaleza ofrece un sublime espectáculo de
+                            contrastes. El entorno da cuenta de una geografía extraordinaria, con suaves planicies que terminan
+                            en cordones montañosos y volcanes que se elevan por encima de los 6.000 metros, contraponiéndose
+                            a los extensos y blancos salares formados por aguas subterráneas que nunca llegan al mar. San
+                            Pedro de Atacama, antaño meta de mochileros, es uno de los destinos turísticos más apetecidos
+                            por el turista extranjero, ya que mezcla el remoto e inhóspito paisaje desértico, el interés
+                            geológico y arqueológico y una variada oferta hotelera
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        Chiloé se ubica a 1.186 kilómetros de Santiago y a 90 kilómetros al suroeste de Puerto Montt. Para llegar se debe navegar
-                        por el canal de Chacao durante aproximadamente 30 minutos en un transbordador que separa el continente
-                        de la costa norte de la isla Grande de Chiloé. Esta isla forma parte del archipiélago del mismo nombre,
-                        constituido por unos treinta islotes más, algunos no habitados. La geografía de la isla se compone
-                        de campos, mar y bosques, con una cultura propia que se refleja en sus construcciones, gastronomía
-                        y mitología. Los palafitos, coloridas casas construidas en pilotes sobre el agua, son uno de los
-                        grandes distintivos de la isla, así como sus iglesias, todas ellas construidas en madera entre los
-                        siglos XVIII y XIX. Si bien son más de 80 los templos característicos de la isla, solo 16 de ellos
-                        han conseguido ser declarados Patrimonio de la Humanidad por la Unesco.
-                    </em>
-
-                </p>
-            </div>
-        </div>
-
     </div>
+    <br>
+    <br>
     <div class="row">
-        <div style='text-align:center;'>
-            <img src="{% static 'images/pichilemu.jpg' %}" />
-        </div>
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
-            <div class="col-full">
-                <h3 class="subhead subhead--dark">Pichilemu, el vicio surfista de Chile</h3>
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/chiloe.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Chiloé, campos, mar y bosques sobre islotes</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            Chiloé se ubica a 1.186 kilómetros de Santiago y a 90 kilómetros al suroeste de Puerto Montt. Para llegar se debe navegar
+                            por el canal de Chacao durante aproximadamente 30 minutos en un transbordador que separa el continente
+                            de la costa norte de la isla Grande de Chiloé. Esta isla forma parte del archipiélago del mismo
+                            nombre, constituido por unos treinta islotes más, algunos no habitados. La geografía de la isla
+                            se compone de campos, mar y bosques, con una cultura propia que se refleja en sus construcciones,
+                            gastronomía y mitología. Los palafitos, coloridas casas construidas en pilotes sobre el agua,
+                            son uno de los grandes distintivos de la isla, así como sus iglesias, todas ellas construidas
+                            en madera entre los siglos XVIII y XIX. Si bien son más de 80 los templos característicos de
+                            la isla, solo 16 de ellos han conseguido ser declarados Patrimonio de la Humanidad por la Unesco.
+                        </em>
+
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="text-center">
-            <div class="card-text">
-                <p class="lead">
-                    <em>
-                        Pichilemu debe ser el destino con la mayor oferta turística surgida en torno al surf en Chile. Es un balneario tradicional
-                        de la zona centro-sur con una de las áreas más ricas del mundo en olas perfectas, largas, constantes
-                        y frías. Prácticamente toda la zona es rural. No hay grandes ciudades ni puertos, solo algunas industrias
-                        y una serie de caletas de pescadores. Seis kilómetros más al sur de Pichilemu está Punta de Lobos,
-                        que se ha convertido en una de las playas más de moda de todo Chile. Ahí también nace la ola Punta
-                        de Lobos, donde todos los días es posible ver a surfistas de distintas partes del mundo deslizándose
-                        sobre toneladas de agua salada.
-                    </em>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div style='text-align:center;'>
+                <img src="{% static 'images/pichilemu.jpg' %}" />
+            </div>
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark">Pichilemu, el vicio surfista de Chile</h3>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            Pichilemu debe ser el destino con la mayor oferta turística surgida en torno al surf en Chile. Es un balneario tradicional
+                            de la zona centro-sur con una de las áreas más ricas del mundo en olas perfectas, largas, constantes
+                            y frías. Prácticamente toda la zona es rural. No hay grandes ciudades ni puertos, solo algunas
+                            industrias y una serie de caletas de pescadores. Seis kilómetros más al sur de Pichilemu está
+                            Punta de Lobos, que se ha convertido en una de las playas más de moda de todo Chile. Ahí también
+                            nace la ola Punta de Lobos, donde todos los días es posible ver a surfistas de distintas partes
+                            del mundo deslizándose sobre toneladas de agua salada.
+                        </em>
 
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
 
     </div>
+    <br>
+    <br>
+    <div class="row">
+
+        <div class="contact-info col-md-12">
+
+            <div class="aside-widget">
+                <div class="section-title">
+                    <h2 class="title">Contactenos</h2>
+                </div>
+                <div class="newsletter-widget">
+                    <form>
+                        <h3>Entérate de las novedades de nuestra página, suscribete!</h3>
+                        <input class="input" name="newsletter" placeholder="Ingrese su correo">
+                        <button class="primary-button">Suscribete</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- end contact-info -->
+
+    </div>
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Glint 2017</span>
+                    <span>Site Template by
+                        <a href="https://www.colorlib.com/">Colorlib</a>
+                    </span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Subir" href="#top">
+                        <img src="{% static 'images/up.png' %}" alt="">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- end footer-bottom -->
+
+    </footer>
+    <!-- end footer -->
 
     <!-- script
     ================================================== -->

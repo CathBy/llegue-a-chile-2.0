@@ -50,30 +50,6 @@
             <!-- Top Nav -->
             <div id="nav-top">
                 <div class="container">
-                    <!-- social -->
-                    <ul class="nav-social">
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-google-plus"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fa fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- /social -->
 
                     <!-- logo -->
                     <div class="nav-logo">
@@ -83,24 +59,6 @@
                     </div>
                     <!-- /logo -->
 
-                    <!-- search & aside toggle -->
-                    <div class="nav-btns">
-                        <button class="aside-btn">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button class="search-btn">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        <div id="nav-search">
-                            <form>
-                                <input class="input" name="search" placeholder="Enter your search...">
-                            </form>
-                            <button class="nav-close search-close">
-                                <span></span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- /search & aside toggle -->
                 </div>
             </div>
             <!-- /Top Nav -->
@@ -129,13 +87,13 @@
                                                     <a href="{% url 'trabajo' %}">Trabajo</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Vivienda</a>
+                                                    <a href="{% url 'vivienda' %}">Vivienda</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Educación</a>
+                                                    <a href="{% url 'educacion' %}">Educación</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Salud</a>
+                                                    <a href="{% url 'salud' %}">Salud</a>
                                                 </li>
                                                 <li>
                                                     <a href="{% url 'transporte' %}">Transporte</a>
@@ -146,25 +104,25 @@
                                             <h4 class="dropdown-heading">Trabajo</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Trabajador/a</a>
+                                                    <a href="{% url 'trabajo' %}">Trabajador/a</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Emprender</a>
+                                                    <a href="{% url 'trabajo' %}">Emprender</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Empleado/a Domestica</a>
+                                                    <a href="{% url 'trabajo' %}">Empleado/a Domestica</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Embarazo</a>
+                                                    <a href="{% url 'trabajo' %}">Embarazo</a>
                                                 </li>
                                             </ul>
                                             <h4 class="dropdown-heading">Vivienda</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Subsidio habitacional</a>
+                                                    <a href="{% url 'vivienda' %}">Subsidio habitacional</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Alquileres</a>
+                                                    <a href="{% url 'vivienda' %}">Alquileres</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -172,22 +130,22 @@
                                             <h4 class="dropdown-heading">Educación</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Básica y media</a>
+                                                    <a href="{% url 'educacion' %}">Básica y media</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Universitaria</a>
+                                                    <a href="{% url 'educacion' %}">Universitaria</a>
                                                 </li>
                                             </ul>
                                             <h4 class="dropdown-heading">Salud</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Derechos</a>
+                                                    <a href="{% url 'salud' %}">Derechos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Pública</a>
+                                                    <a href="{% url 'salud' %}">Pública</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Privada</a>
+                                                    <a href="{% url 'salud' %}">Privada</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -195,13 +153,13 @@
                                             <h4 class="dropdown-heading">Transporte</h4>
                                             <ul class="dropdown-list">
                                                 <li>
-                                                    <a href="#">Transantiago</a>
+                                                    <a href="{% url 'transporte' %}">Transantiago</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Metro</a>
+                                                    <a href="{% url 'transporte' %}">Metro</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#">Ciclovias</a>
+                                                    <a href="{% url 'transporte' %}">Ciclovias</a>
                                                 </li>
 
                                             </ul>
@@ -211,62 +169,18 @@
                             </div>
                         </li>
                         <li>
-                            <a href="#">Conocer</a>
+                            <a href="{% url 'conocer' %}">Conocer</a>
                         </li>
                         <li>
-                            <a href="#">Documentación</a>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
                         </li>
-                        <li>
-                            <a href="#">Ayudar</a>
-                        </li>
+
                     </ul>
                     <!-- /nav -->
                 </div>
             </div>
             <!-- /Main Nav -->
 
-            <!-- Aside Nav -->
-            <div id="nav-aside">
-                <ul class="nav-aside-menu">
-                    <li>
-                        <a href="index.html">Home
-                            < La mitad de las pymes chilenas dice tener trabajadores extranjeros/a>
-                    </li>
-                    <li class="has-dropdown">
-                        <a>Chile</a>
-                        <ul class="dropdown">
-                            <li>
-                                <a href="#">Lifestyle</a>
-                            </li>
-                            <li>
-                                <a href="#">Fashion</a>
-                            </li>
-                            <li>
-                                <a href="#">Technology</a>
-                            </li>
-                            <li>
-                                <a href="#">Travel</a>
-                            </li>
-                            <li>
-                                <a href="#">Health</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="about.html">About Us</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contacts</a>
-                    </li>
-                    <li>
-                        <a href="#">Advertise</a>
-                    </li>
-                </ul>
-                <button class="nav-close nav-aside-close">
-                    <span></span>
-                </button>
-            </div>
-            <!-- /Aside Nav -->
         </div>
 
         <nav class="header-nav">
@@ -280,55 +194,31 @@
 
                 <ul class="header-nav__list">
                     <li class="current">
-                        <a class="smoothscroll" href="#home" title="home">Home</a>
+                        <a class="smoothscroll" href="#home" title="home">Inicio</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Presentación</a>
+                        <a class="dropdown-item" href="#about">Presentación</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Noticias</a>
+                        <a class="dropdown-item" href="{% url 'trabajo' %}">Trabajo</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Trabajo</a>
+                        <a class="dropdown-item" href="{% url 'vivienda' %}">Vivienda</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Vivienda</a>
+                        <a class="dropdown-item" href="{% url 'educacion' %}">Educación</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Educación</a>
+                        <a class="dropdown-item" href="{% url 'salud' %}">Salud</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Salud</a>
+                        <a class="dropdown-item" href="{% url 'transporte' %}">Transporte</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Transporte</a>
+                        <a class="dropdown-item" href="{% url 'conocer' %}">Conocer</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Conocer</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Documentación</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Ayudar</a>
-                    </li>
-                </ul>
-
-                <ul class="header-nav__social">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-instagram"></i>
-                        </a>
+                        <a class="dropdown-item" href="{% url 'documentacion' %}">Documentación</a>
                     </li>
 
                 </ul>
@@ -364,17 +254,7 @@
                     <br> Informate sobre esto!
 
                 </h1>
-
-                <!--
-                <div class="home-content__buttons">
-                    <a href="#contact" class="smoothscroll btn btn--stroke">
-                        Publicar un aviso
-                    </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke">
-                        Necesito ayuda!
-                    </a>
-                </div>
-            -->
+            
 
             </div>
 

@@ -1,0 +1,550 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+
+<html class="no-js" lang="es-CL">
+
+
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Llegue a Chile</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/argon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/argon.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static '//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css' %}" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="{% static 'https://use.fontawesome.com/releases/v5.3.1/css/all.css' %}" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        -->
+    <!-- crossorigin="anonymous"> -->
+
+    <script src="{% static '//code.jquery.com/jquery-1.11.1.min.js' %}"></script>
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+        ================================================== -->
+    <header class="s-header">
+
+        <div id="nav">
+            <!-- Top Nav -->
+            <div id="nav-top">
+                <div class="container">
+
+                    <!-- logo -->
+                    <div class="nav-logo">
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+
+                </div>
+            </div>
+            <!-- /Top Nav -->
+
+            <!-- Main Nav -->
+            <div id="nav-bottom">
+                <div class="container">
+                    <!-- nav -->
+                    <ul class="nav-menu">
+                        <li class="has-dropdown">
+                            <a href="{% url 'index' %}">Inicio</a>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#about">Presentación</a>
+
+                        </li>
+                        <li class="has-dropdown megamenu">
+                            <a href="#">Chile</a>
+                            <div class="dropdown">
+                                <div class="dropdown-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Categorias</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Trabajo</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Vivienda</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Educación</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Salud</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Transporte</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Trabajo</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Trabajador/a</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Emprender</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Empleado/a Domestica</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'trabajo' %}">Embarazo</a>
+                                                </li>
+                                            </ul>
+                                            <h4 class="dropdown-heading">Vivienda</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Subsidio habitacional</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'vivienda' %}">Alquileres</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Educación</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Básica y media</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'educacion' %}">Universitaria</a>
+                                                </li>
+                                            </ul>
+                                            <h4 class="dropdown-heading">Salud</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Derechos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Pública</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'salud' %}">Privada</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4 class="dropdown-heading">Transporte</h4>
+                                            <ul class="dropdown-list">
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Transantiago</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Metro</a>
+                                                </li>
+                                                <li>
+                                                    <a href="{% url 'transporte' %}">Ciclovias</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="{% url 'conocer' %}">Conocer</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="has-dropdown" href="#" data-toggle="modal" data-target="#exampleModal">Login</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <!-- end header-nav__content -->
+
+                </nav>
+                <!-- end header-nav -->
+
+                <a class="header-menu-toggle" href="#0">
+                    <span class="header-menu-text"></span>
+                    <span class="header-menu-icon"></span>
+                </a>
+
+    </header>
+    <!-- end s-header -->
+
+
+    <!-- home
+        ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{% static 'images/documentacion.jpg' %}"
+        data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Bienvenido a Chile!</h3>
+
+                <h1>
+                    Guía para migrantes
+                    <br> Documentación necesaria para venir a Chile
+
+                </h1>
+
+                <div class="home-content__buttons">
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        Informarme!
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Ir abajo</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div>
+        <!-- end home-content -->
+
+
+        <ul class="home-social">
+            <li>
+                <div class="dropdown">
+                    <li href="#0">
+                        <i class="icon-settings" aria-hidden="true">
+                            <img src="{% static 'images/idiomas.png' %}" alt="">
+                        </i>
+                        <span>Language</span>
+                    </li>
+
+                </div>
+            </li>
+
+        </ul>
+        <!-- end home-social -->
+
+    </section>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                <div class="col-full">
+                    <h3 class="subhead subhead--dark"></h3>
+                    <h1 class="display-1 display-1--light">Chile te recibe</h1>
+                </div>
+
+            </div>
+
+            <div class="text-center">
+                <div class="card-text">
+                    <p class="lead">
+                        <em>
+                            La decisión de migrar a un nuevo país, suele estar acompañada de inquietudes y desconocimiento sobre el modo en que se organiza
+                            la sociedad de destino. Por ello, es de gran utilidad para las personas migrantes el contar,
+                            desde su llegada, con información clara sobre el país al que han decidido trasladarse. Para entregarle
+                            la información necesaria usamos la Guía SOY MIGRANTE, TENGO DERECHOS que es un material informativo
+                            en el que los nuevos habitantes de nuestro país podrán encontrar información fundamental para
+                            integrarse y acceder a derechos sociales. Esta Guía es el resultado del trabajo del Consulado
+                            General del Perú en Santiago, la Organización Internacional para las Migraciones y la Fundación
+                            Instituto de la Mujer, que han evidenciado su compromiso con el desarrollo de una migración ordenada,
+                            segura y regular para Chile. Compromiso que se enmarca dentro de los lineamientos de este Gobierno,
+                            que ha emprendido la tarea de implementar medidas en pos de la regularidad migratoria. Una de
+                            estas, es la iniciativa “Chile Te Recibe”, la cual busca realizar avances concretos en la manera
+                            en que el Estado aborda los desafíos que plantea la migración. Un elemento central de la gestión
+                            de nuestro Gobierno ha sido promover la protección de los niños y niñas migrantes, para lo cual
+                            se ha creado la visa para niños, niñas y adolescentes recientemente anunciada por la Presidencia
+                            de la República, a partir de la convicción de que hayan nacido en Chile o no, los niños y niñas
+                            tienen los mismos derechos. Con esta visa damos cumplimiento a la Convención de Derechos del
+                            Niño, pues la infancia migrante podrán regularizarse independientemente de la situación migratoria
+                            de sus padres. Así, recibirán protección del Estado, sin discriminación y en igualdad de condiciones
+                            con niñas y niños chilenos. Estas medidas buscan abordar los desafíos y oportunidades que plantea
+                            la migración de manera seria y responsable y, en este sentido, el resguardo de la dignidad de
+                            las personas migrantes es una tarea permanente. Esperamos que esta Guía acompañe a quienes han
+                            elegido a Chile como su nuevo hogar. Mario Ossandón Cañas Jefe de División de Gobierno Interior
+                            Ministerio del Interior y Seguridad Pública de Chile.
+                        </em>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="Migracion-tab" data-toggle="pill" href="#Migracion" role="tab" aria-controls="Migracion" aria-selected="true">Migración</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Trabajo-tab" data-toggle="pill" href="#Trabajo" role="tab" aria-controls="Trabajo" aria-selected="false">Trabajo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Autoempleo-tab" data-toggle="pill" href="#Autoempleo" role="tab" aria-controls="Autoempleo" aria-selected="false">Autoempleo y emprendimieto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Salud-tab" data-toggle="pill" href="#Salud" role="tab" aria-controls="Salud" aria-selected="false">Salud</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Educacion-tab" data-toggle="pill" href="#Educacion" role="tab" aria-controls="Educacion" aria-selected="false">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Vivienda-tab" data-toggle="pill" href="#Vivienda" role="tab" aria-controls="Vivienda" aria-selected="false">Vivienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Familia-tab" data-toggle="pill" href="#Familia" role="tab" aria-controls="Familia" aria-selected="false">Familia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Justicia-tab" data-toggle="pill" href="#Justicia" role="tab" aria-controls="Justicia" aria-selected="false">Justicia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Autocuidado-tab" data-toggle="pill" href="#Autocuidado" role="tab" aria-controls="Autocuidado" aria-selected="false">Autocuidado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="Servicios-tab" data-toggle="pill" href="#Servicios" role="tab" aria-controls="Servicios" aria-selected="false">Servicios</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <br>
+        <hr noshade style="margin-top:-20px;">
+        <div class="container">
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="Migracion" role="tabpanel" aria-labelledby="Migracion-tab">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">MIGRACIÓN Y VISAS EN CHILE</h3>
+                                </div>
+                            </div>
+                            <div style='text-align:center;'>
+                                <img class="zoom" src="{% static 'images/infografia.jpg' %}" />
+                            </div>
+                            <div class="text-center">
+                                <div class="card-text">
+                                    <p class="lead">
+                                        <em>
+                                            La migración es parte de la historia de la humanidad. Todos y todas hemos sido, o podríamos ser, migrantes alguna vez. Según
+                                            la Organización Internacional para las Migraciones (OIM), la migración “es el
+                                            movimiento de personas dentro de un mismo territorio nacional o hacia otros estados/países,
+                                            sea cual sea su tamaño, su composición o sus causas; económicas, sociales, laborales
+                                            y familiares”. En la actualidad, miles de personas viajan y se mueven de un continente
+                                            a otro, de un país a otro, ejerciendo su derecho a la movilidad espacial, consagrada
+                                            en el Artículo 13 de la Declaración Universal de los Derechos Humanos. Muchas
+                                            de ellas, optan por migrar como una experiencia de vida nueva, por estudios o
+                                            porque en sus lugares de orígenes no cuentan con condiciones óptimas de subsistencia
+                                            y, por tanto, buscan un lugar que pueda brindarles mayor estabilidad. Los países
+                                            han establecido ciertos requisitos para el ingreso y permanencia de extranjeros
+                                            en sus territorios.
+                                        </em>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <div class="card-text">
+                                    <p class="lead">
+
+                                        Chile cuenta con diferentes normas que regulan la migración dentro de sus fronteras: • Decreto Ley 1.094 de 1975, y sus posteriores
+                                        modificaciones, que establece Normas sobre Extranjeros en Chile.
+                                    </p>
+                                    <p class="lead">
+                                        • Decreto Supremo 597 de 1984, y sus posteriores modificaciones, que establece el Reglamento de Extranjería. • Decreto Supremo
+                                        5.142 de 1960; que fija las Disposiciones sobre Nacionalización de Extranjeros.
+                                    </p>
+                                    <p class="lead">
+                                        • Ley 20.050 del 26-08-2005, que Reforma la Constitución Política de 1980 que, entre otras cuestiones, regula materias de
+                                        nacionalidad (artículos 10 y 11).
+                                    </p>
+                                    <p class="lead">• Ley 20.507, que Tipifica los Delitos de Tráfico Ilícito de Migrantes y Trata de Personas
+                                        y Establece Normas para su Prevención y más Efectiva Persecución Criminal. </p>
+                                    <p class="lead">• Ley 20.430, que establece Disposiciones sobre Protección de Refugiados. • Decreto 837,
+                                        que aprueba Reglamento de la Ley 20.430 referido a las Disposiciones sobre Protección
+                                        de Refugiados. (Información disponible en: www.extranjeria.gob.cl/legislacion-migratoria/)</p>
+                                </div>
+                            </div>
+                            <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                                <div class="col-full">
+                                    <h3 class="subhead subhead--dark">¿QUÉ ES EL DEPARTAMENTO DE EXTRANJERÍA Y MIGRACIONES (DEM)?</h3>
+                                </div>
+                            </div>
+                            <p class="lead">
+                                El Departamento de Extranjería y Migración (DEM) es la entidad, dependiente del Ministerio del Interior y Seguridad Pública,
+                                encargada de tareas como:
+                            </p>
+                            <p class="lead">
+                                * Asesorarte en materia jurídica y de visado.
+                            </p>
+                            <p class="lead">
+                                * Evaluar las solicitudes de las distintas visas.
+                            </p>
+                            <p class="lead">
+                                * Evaluar las solicitudes de nacionalización.
+                            </p>
+                            <p class="lead">
+                                * Evaluar las solicitudes de refugio o asilo político.
+                            </p>
+                            <p class="lead">
+                                * Registrar y sancionar las infracciones
+                            </p>
+                            <p class="lead">
+                                En las fronteras, la Policía de Investigaciones de Chile (PDI), a través de Policía Internacional, tiene la función de controlar
+                                el ingreso y salida del país, al igual que denunciar cualquier infracción.
+                            </p>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-4">
+                        <div style='text-align:center;'>
+                            <img src="{% static 'images/informacion.png' %}" />
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <p class="lead">
+                            Departamento de Extranjería y Migraciones (DEM) San Antonio 580, Santiago (Oficina principal) Tel: 225-502-410 Fanor Velasco
+                            56 Santiago (Nueva Sede) Tel: 600 486 3000
+                        </p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+                            <div class="col-full">
+                                <h3 class="subhead subhead--dark">IMPORTANTE!</h3>
+                            </div>
+                        </div>
+                        <p class="lead">
+                            El ingreso al país debe ser por una zona fronteriza autorizada, portando pasaporte vigente o un tipo de identificación válida.
+                            De lo contrario, la entrada será denegada o considerada ILEGAL.
+                        </p>
+                        <p class="lead">
+                            La entrada a Chile puede ser negada si existen impedimentos o prohibiciones como resultado de ingresos irregulares o procesos
+                            legales pendientes, así como por haber violado las condiciones de permanencia con anterioridad.
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="Trabajo" role="tabpanel" aria-labelledby="Trabajo-tab">
+                    <div class="row">
+
+
+                    </div>
+                </div>
+                <!-- autoempleo -->
+                <div class="tab-pane fade" id="Autoempleo" role="tabpanel" aria-labelledby="Autoempleo-tab">
+                    <div class="row">
+
+
+                    </div>
+                </div>
+                <!-- salud -->
+                <div class="tab-pane fade" id="Salud" role="tabpanel" aria-labelledby="Salud-tab">
+                    <div class="row">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="contact-info col-md-12">
+
+            <div class="aside-widget">
+                <div class="section-title">
+                    <h2 class="title">Contactenos</h2>
+                </div>
+                <div class="newsletter-widget">
+                    <form>
+                        <h3>Entérate de las novedades de nuestra página, suscribete!</h3>
+                        <input class="input" name="newsletter" placeholder="Ingrese su correo">
+                        <button class="primary-button">Suscribete</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- end contact-info -->
+
+    </div>
+
+    <!-- footer================================================== -->
+    <footer>
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Glint 2017</span>
+                    <span>Site Template by
+                        <a href="https://www.colorlib.com/">Colorlib</a>
+                    </span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Subir" href="#top">
+                        <img src="{% static 'images/up.png' %}" alt="">
+                        <i class="icon-arrow-up" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- end footer-bottom -->
+
+    </footer>
+    <!-- end footer -->
+
+    <!-- script================================================== -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+    <script src="{% static 'js/pace.min.js' %}"></script>
+    <script src="{% static 'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js' %}"></script>
+
+
+    <!-- Java Script================================================== -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/argon.js' %}"></script>
+    <script src="{% static 'js/argon.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

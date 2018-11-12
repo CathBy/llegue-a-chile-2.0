@@ -1581,3 +1581,8 @@ form[role=login] {
     -webkit-transform : scale(2);   /* Chrome - Safari */
     -o-transform : scale(2);        /* Opera */
 }
+@keyframes winanim {
+  0%{opacity:0;transform:scale3d(.3,.3,.3)}
+  50%{opacity:1}
+  
+}
