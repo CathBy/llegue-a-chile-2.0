@@ -330,7 +330,7 @@
                     <!-- post -->
                     <div class="post post-thumb">
                         <a class="post-img" href="blog-post.html">
-                            <img src="{% static 'images/portfolio/woodcraft.jpg' %}" alt="">
+                            <img src="{% static 'images/temporal.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
@@ -674,51 +674,61 @@
                     </div>
                     <!-- /social widget -->
 
-                    <!-- category widget -->
-                    <div class="aside-widget">
-                        <div class="section-title">
-                            <h2 class="title">Categories</h2>
-                        </div>
-                        <div class="category-widget">
-                            <ul>
-                                <li>
-                                    <a href="#">Lifestyle
-                                        <span>451</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Fashion
-                                        <span>230</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Technology
-                                        <span>40</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Travel
-                                        <span>38</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">Health
-                                        <span>24</span>
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="row">
+                        <div class="aside-widget col-md-12">
+                            <div class="section-title">
+                                <h2 class="title">Categorias</h2>
+                            </div>
+                            <div class="category-widget">
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'trabajo' %}">Trabajo
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'transporte' %}">Transporte
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'educacion' %}">Educación
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'vivienda' %}">Vivienda
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'salud' %}">Salud
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'documentacion' %}">Documentación
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'conocer' %}">Conocer Chile
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <!-- /category widget -->
 
                     <!-- newsletter widget -->
                     <div class="aside-widget">
                         <div class="section-title">
-                            <h2 class="title">Newsletter</h2>
+                            <h2 class="title">Mantente Actualizado</h2>
                         </div>
                         <div class="newsletter-widget">
                             <form>
-                                <p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
+                                <p class="lead">Recibe las novedades de nuestra pagina en tu correo</p>
                                 <input class="input" name="newsletter" placeholder="Enter Your Email">
                                 <button class="primary-button">Suscribete</button>
                             </form>
