@@ -44,7 +44,6 @@
 {% load staticfiles %}
 
 <body id="top">
-
     <!-- header
     ================================================== -->
     <header class="s-header">
@@ -362,12 +361,12 @@
                 <div class="col-md-8 hot-post-left">
                     <!-- post -->
                     <div class="post post-thumb">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="{% url 'trabajo' %}">
                             <img src="{% static 'images/trabajadores.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
-                                <a href="category.html"></a>
+                                <a href="{% url 'trabajo' %}"></a>
                             </div>
                             <h3 class="post-title title-lg">
                                 <a href="#" data-toggle="modal" data-target="#miventana1">La mitad de las pymes chilenas dice tener trabajadores extranjeros</a>
@@ -379,12 +378,12 @@
                 <div class="col-md-4 hot-post-right">
                     <!-- post -->
                     <div class="post post-thumb">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="{% url 'documentacion' %}">
                             <img src="{% static 'images/visa.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
-                                <a href="category.html"></a>
+                                <a href="{% url 'documentacion' %}"></a>
                             </div>
                             <h3 class="post-title">
                                 <a href="#" data-toggle="modal" data-target="#miventana2">Mesa sindical propone visa temporal para extranjeros</a>
@@ -395,7 +394,7 @@
 
                     <!-- post -->
                     <div class="post post-thumb">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="{% url 'trabajo' %}">
                             <img src="{% static 'images/haitianos.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
@@ -440,12 +439,12 @@
                 <!-- post -->
                 <div class="col-md-4">
                     <div class="post">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="{% url 'trabajo' %}">
                             <img src="{% static 'images/picking.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
-                                <a href="category.html"></a>
+                                <a href="{% url 'trabajo' %}"></a>
                             </div>
                             <h3 class="post-title">
                                 <a href="#" data-toggle="modal" data-target="#miventana4">Operadores Picking Quilicura El cortijo
@@ -459,12 +458,12 @@
                 <!-- post -->
                 <div class="col-md-4">
                     <div class="post">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="{% url 'trabajo' %}">
                             <img src="{% static 'images/aseo.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
-                                <a href="category.html"></a>
+                                <a href="{% url 'trabajo' %}"></a>
 
                             </div>
                             <h3 class="post-title">
@@ -479,12 +478,12 @@
                 <!-- post -->
                 <div class="col-md-4">
                     <div class="post">
-                        <a class="post-img" href="blog-post.html">
+                        <a class="post-img" href="{% url 'trabajo' %}">
                             <img src="{% static 'images/operario.jpg' %}" alt="">
                         </a>
                         <div class="post-body">
                             <div class="post-category">
-                                <a href="category.html"></a>
+                                <a href="{% url 'trabajo' %}"></a>
                             </div>
                             <h3 class="post-title">
                                 <a href="#" data-toggle="modal" data-target="#miventana6">Operario turno PM para tienda ubicada en AIEP de Bellavista! de lunes a sábado!</a>
@@ -507,12 +506,12 @@
             <!-- post -->
             <div class="col-md-4">
                 <div class="post post-sm">
-                    <a class="post-img" href="blog-post.html">
+                    <a class="post-img" href="{% url 'documentacion' %}">
                         <img src="{% static 'images/viajar-documentacion.jpg' %}" alt="">
                     </a>
                     <div class="post-body">
                         <div class="post-category">
-                            <a href="category.html">Documentación</a>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
                         </div>
                         <h3 class="post-title title-sm">
                             <a href="#" data-toggle="modal" data-target="#miventana7">¿Que documentos debo tener para viajar?</a>
@@ -531,7 +530,7 @@
                     </a>
                     <div class="post-body">
                         <div class="post-category">
-                            <a href="category.html">Documentación</a>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
                         </div>
                         <h3 class="post-title title-sm">
                             <a href="#" data-toggle="modal" data-target="#miventana8">¿Que debo hacer al momento de llegar a Chile?</a>
@@ -549,7 +548,7 @@
                     </a>
                     <div class="post-body">
                         <div class="post-category">
-                            <a href="category.html">Documentación</a>
+                            <a href="{% url 'documentacion' %}">Documentación</a>
                         </div>
                         <h3 class="post-title title-sm">
                             <a href="#" data-toggle="modal" data-target="#miventana9">¿Cuáles son los tipos de visa de residencia temporal?
@@ -850,8 +849,8 @@
 
 
                     <div class="pwstrength_viewport_progress"></div>
-
-
+                
+                    
                     <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Ingresar</button>
                     <div>
                         <a href="{% url 'formulario' %}">Crear cuenta</a> or
